@@ -1,0 +1,1730 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>Privacy Policy — LangSwap</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+
+      --bg-light: #f8fafc;
+      --bg-dark: #0f172a;
+      --surface-light: #ffffff;
+      --surface-dark: #1e293b;
+      --text-light: #0f172a;
+      --text-dark: #f1f5f9;
+      --muted-light: #475569;
+      --muted-dark: #94a3b8;
+      --border-light: #e2e8f0;
+      --border-dark: #334155;
+      --accent-light: #4f46e5;
+      --accent-dark: #818cf8;
+      --accent-hover-light: #4338ca;
+      --accent-hover-dark: #a5b4fc;
+      --code-bg-light: #f1f5f9;
+      --code-bg-dark: #0f172a;
+      --note-bg-light: #f8fafc;
+      --note-bg-dark: #172033;
+
+      --bg: var(--bg-light);
+      --surface: var(--surface-light);
+      --text: var(--text-light);
+      --muted: var(--muted-light);
+      --border: var(--border-light);
+      --accent: var(--accent-light);
+      --accent-hover: var(--accent-hover-light);
+      --code-bg: var(--code-bg-light);
+      --note-bg: var(--note-bg-light);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: var(--bg-dark);
+        --surface: var(--surface-dark);
+        --text: var(--text-dark);
+        --muted: var(--muted-dark);
+        --border: var(--border-dark);
+        --accent: var(--accent-dark);
+        --accent-hover: var(--accent-hover-dark);
+        --code-bg: var(--code-bg-dark);
+        --note-bg: var(--note-bg-dark);
+      }
+    }
+
+    @supports (color: light-dark(white, black)) {
+      :root {
+        --bg: light-dark(var(--bg-light), var(--bg-dark));
+        --surface: light-dark(var(--surface-light), var(--surface-dark));
+        --text: light-dark(var(--text-light), var(--text-dark));
+        --muted: light-dark(var(--muted-light), var(--muted-dark));
+        --border: light-dark(var(--border-light), var(--border-dark));
+        --accent: light-dark(var(--accent-light), var(--accent-dark));
+        --accent-hover: light-dark(var(--accent-hover-light), var(--accent-hover-dark));
+        --code-bg: light-dark(var(--code-bg-light), var(--code-bg-dark));
+        --note-bg: light-dark(var(--note-bg-light), var(--note-bg-dark));
+      }
+    }
+
+    html {
+      accent-color: var(--accent);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 2rem 1rem 4rem;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans JP", "Noto Sans KR", "Noto Sans SC", "Noto Sans TC", "Noto Sans Arabic", "Noto Sans Thai", "Noto Sans Devanagari", sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+      background-color: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 2.25rem 2.5rem;
+      box-shadow: 0 4px 24px rgba(15, 23, 42, 0.06);
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 1rem 0.5rem 2.5rem;
+      }
+      .container {
+        padding: 1.5rem 1.25rem;
+        border-radius: 10px;
+      }
+    }
+
+    .topbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding-bottom: 1.25rem;
+      margin-bottom: 1.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .brand {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--accent);
+      letter-spacing: 0.02em;
+    }
+
+    .lang-control {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .lang-control label {
+      font-size: 0.875rem;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .lang-control select {
+      font: inherit;
+      font-size: 0.875rem;
+      min-block-size: 36px;
+      padding: 0.4rem 0.75rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background-color: var(--bg);
+      color: var(--text);
+      cursor: pointer;
+    }
+
+    .lang-control select:focus-visible,
+    a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    h1 {
+      margin: 0 0 0.75rem;
+      font-size: 1.85rem;
+      line-height: 1.3;
+    }
+
+    .meta {
+      margin: 0 0 1.5rem;
+      font-size: 0.925rem;
+      color: var(--muted);
+    }
+
+    .meta div + div {
+      margin-top: 0.2rem;
+    }
+
+    .intro {
+      margin: 0 0 2rem;
+    }
+
+    section {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+    }
+
+    h2 {
+      margin: 0 0 0.75rem;
+      font-size: 1.22rem;
+      line-height: 1.4;
+    }
+
+    p {
+      margin: 0 0 0.85rem;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    ul {
+      margin: 0.5rem 0 0.9rem;
+      padding-inline-start: 1.4rem;
+    }
+
+    li {
+      margin-bottom: 0.45rem;
+    }
+
+    li:last-child {
+      margin-bottom: 0;
+    }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.88em;
+      background-color: var(--code-bg);
+      padding: 0.12em 0.4em;
+      border-radius: 5px;
+      border: 1px solid var(--border);
+      direction: ltr;
+      unicode-bidi: embed;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      word-break: break-word;
+    }
+
+    a:hover {
+      color: var(--accent-hover);
+    }
+
+    .note {
+      margin-top: 1rem;
+      padding: 0.85rem 1rem;
+      background-color: var(--note-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    .doc-footer {
+      margin-top: 2rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.875rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="topbar">
+      <div class="brand">LangSwap · Studio Nova Works</div>
+      <div class="lang-control">
+        <label for="langSelect" id="langLabel">Language</label>
+        <select id="langSelect">
+          <option value="en" lang="en">English</option>
+          <option value="ja" lang="ja">日本語</option>
+          <option value="ar" lang="ar">العربية</option>
+          <option value="de" lang="de">Deutsch</option>
+          <option value="es" lang="es">Español</option>
+          <option value="fr" lang="fr">Français</option>
+          <option value="hi" lang="hi">हिन्दी</option>
+          <option value="id" lang="id">Bahasa Indonesia</option>
+          <option value="it" lang="it">Italiano</option>
+          <option value="ko" lang="ko">한국어</option>
+          <option value="pt" lang="pt">Português</option>
+          <option value="ru" lang="ru">Русский</option>
+          <option value="th" lang="th">ไทย</option>
+          <option value="tr" lang="tr">Türkçe</option>
+          <option value="uk" lang="uk">Українська</option>
+          <option value="vi" lang="vi">Tiếng Việt</option>
+          <option value="zh_CN" lang="zh-Hans">简体中文</option>
+          <option value="zh_TW" lang="zh-Hant">繁體中文</option>
+        </select>
+      </div>
+    </header>
+
+    <!-- Static English fallback ensures non-JS crawlers and automated checks always read the complete policy -->
+    <main id="policyContent">
+      <h1>Privacy Policy — LangSwap</h1>
+      <div class="meta">
+        <div><strong>Last Updated:</strong> November 21, 2026</div>
+        <div><strong>Developer:</strong> Studio Nova Works</div>
+      </div>
+      <p class="intro">
+        Studio Nova Works ("we", "our", or "us") respects your privacy and is committed to protecting your data when using the macOS application "LangSwap for Mac US Keyboard" (the "App"). This Privacy Policy explains how the App handles information.
+      </p>
+
+      <section>
+        <h2>1. No Collection of Personal Data</h2>
+        <p>The App does not collect, record, store, or transmit any personally identifiable information (such as your name, email address, account credentials, or payment details), typed text, keystroke logs, clipboard contents, screen contents, or application usage history.</p>
+        <p>The App does not require user registration or account login.</p>
+      </section>
+
+      <section>
+        <h2>2. Settings Stored Locally on Your Mac</h2>
+        <p>To remember your preferences across sessions, the App stores only the following configuration settings locally on your Mac using macOS <code>UserDefaults</code> (bundle domain <code>com.studionovaworks.LangSwap</code>):</p>
+        <ul>
+          <li>Main switching active/paused state (<code>LangSwap.isEnabled</code>)</li>
+          <li>Assigned input source IDs for Left Command and Right Command (<code>LangSwap.leftCommandSourceID</code>, <code>LangSwap.rightCommandSourceID</code>) and saved language pairs (<code>LangSwap.presets</code>)</li>
+          <li>Single-tap duration threshold and on-screen notification toggle (<code>LangSwap.tapTimeoutMs</code>, <code>LangSwap.showHUDNotification</code>)</li>
+          <li>Startup behavior, appearance mode, UI language preference, and first-launch setup flag (<code>LangSwap.launchInBackground</code>, <code>LangSwap.appTheme</code>, <code>LangSwap.appLanguage</code>, <code>LangSwap.hasInitializedDefaults</code>)</li>
+        </ul>
+        <p>If you explicitly enable "Launch at Login", macOS registers the Login Item locally through Apple's <code>SMAppService</code> framework. All settings remain strictly on your device and are never synced to Studio Nova Works servers or third parties.</p>
+      </section>
+
+      <section>
+        <h2>3. On-Device Processing and Zero Automatic Network Activity</h2>
+        <p>To switch input sources when you single-tap the Left or Right Command key, the App evaluates hardware modifier flags and non-blocking input signals (<code>flagsChanged</code>, regular key presses, and mouse actions strictly to cancel switching during shortcuts such as <code>⌘+C</code> or <code>⌘+Click</code>) transiently in volatile memory.</p>
+        <p>The characters you type, passwords, and keystroke histories are never recorded to disk or transmitted externally. Switching input sources uses Apple's local Carbon Text Input Source (<code>TISSelectInputSource</code>) API offline on your Mac.</p>
+        <p>The App runs entirely offline and makes no automatic background network requests. Your default web browser opens an external link only when you explicitly click an optional external link inside the App (such as the Ko-fi development support button or the Privacy Policy link).</p>
+      </section>
+
+      <section>
+        <h2>4. macOS System Permissions (Principle of Least Privilege)</h2>
+        <p>The App follows the principle of least privilege and requests only the minimum macOS permission required to operate across applications:</p>
+        <ul>
+          <li><code>Input Monitoring</code> (<code>kTCCServiceListenEvent</code> / read-only <code>CGEventTapOptions.listenOnly</code>): Used solely to detect standalone Left or Right Command taps while other apps are active, without modifying or blocking your keyboard input.</li>
+          <li><strong>Permissions Not Requested</strong>: The App does not request Accessibility control (<code>kTCCServiceAccessibility</code>), Full Disk Access, Screen Recording, Camera, Microphone, or Contacts, and automatically respects macOS Secure Input protection (for example, password fields).</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>5. Third-Party Services, Analytics, and Advertising</h2>
+        <ul>
+          <li>The App does not include any third-party SDKs, analytics tools, crash reporters, telemetry, or advertising networks.</li>
+          <li>The App does not load or execute remotely hosted code.</li>
+          <li>We never sell, rent, share, or disclose user data to third parties.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>6. Data Retention and Deletion</h2>
+        <p>Because no data is collected on any external server, you can permanently remove all local preferences and permissions on your Mac at any time by disabling "Launch at Login" inside the App, deleting <code>/Applications/LangSwap.app</code>, running <code>defaults delete com.studionovaworks.LangSwap</code> in Terminal, and removing LangSwap from System Settings &gt; Privacy &amp; Security &gt; Input Monitoring.</p>
+      </section>
+
+      <section>
+        <h2>7. Changes to This Privacy Policy</h2>
+        <p>We may update this Privacy Policy from time to time to reflect changes in the App's features or macOS platform requirements. Any updates will be indicated by updating the "Last Updated" date at the top of this page.</p>
+      </section>
+
+      <section>
+        <h2>8. Developer Information &amp; Related Links</h2>
+        <p>For general information and updates about this App, please visit:</p>
+        <ul>
+          <li><strong>Developer:</strong> Studio Nova Works</li>
+          <li><strong>Information Page:</strong> <a href="https://ko-fi.com/studionovaworks" target="_blank" rel="noopener noreferrer">https://ko-fi.com/studionovaworks</a></li>
+        </ul>
+        <p class="note">Note: This App is a free, independently developed personal tool provided "as is." Dedicated technical support or individual inquiries are generally not provided.</p>
+      </section>
+    </main>
+
+    <footer class="doc-footer">
+      <span id="footerCopyright">© 2026 Studio Nova Works</span>
+    </footer>
+  </div>
+
+  <script>
+    const INFO_URL = "https://ko-fi.com/studionovaworks";
+
+    const POLICIES = {
+      en: {
+        dir: "ltr",
+        langLabel: "Language",
+        docTitle: "Privacy Policy — LangSwap",
+        h1: "Privacy Policy — LangSwap",
+        lastUpdatedLabel: "Last Updated:",
+        lastUpdatedValue: "November 21, 2026",
+        developerLabel: "Developer:",
+        developerValue: "Studio Nova Works",
+        intro: 'Studio Nova Works ("we", "our", or "us") respects your privacy and is committed to protecting your data when using the macOS application "LangSwap for Mac US Keyboard" (the "App"). This Privacy Policy explains how the App handles information.',
+        s1: {
+          title: "1. No Collection of Personal Data",
+          p1: "The App does not collect, record, store, or transmit any personally identifiable information (such as your name, email address, account credentials, or payment details), typed text, keystroke logs, clipboard contents, screen contents, or application usage history.",
+          p2: "The App does not require user registration or account login."
+        },
+        s2: {
+          title: "2. Settings Stored Locally on Your Mac",
+          p1: "To remember your preferences across sessions, the App stores only the following configuration settings locally on your Mac using macOS `UserDefaults` (bundle domain `com.studionovaworks.LangSwap`):",
+          items: [
+            "Main switching active/paused state (`LangSwap.isEnabled`)",
+            "Assigned input source IDs for Left Command and Right Command (`LangSwap.leftCommandSourceID`, `LangSwap.rightCommandSourceID`) and saved language pairs (`LangSwap.presets`)",
+            "Single-tap duration threshold and on-screen notification toggle (`LangSwap.tapTimeoutMs`, `LangSwap.showHUDNotification`)",
+            "Startup behavior, appearance mode, UI language preference, and first-launch setup flag (`LangSwap.launchInBackground`, `LangSwap.appTheme`, `LangSwap.appLanguage`, `LangSwap.hasInitializedDefaults`)"
+          ],
+          p2: 'If you explicitly enable "Launch at Login", macOS registers the Login Item locally through Apple\'s `SMAppService` framework. All settings remain strictly on your device and are never synced to Studio Nova Works servers or third parties.'
+        },
+        s3: {
+          title: "3. On-Device Processing and Zero Automatic Network Activity",
+          p1: "To switch input sources when you single-tap the Left or Right Command key, the App evaluates hardware modifier flags and non-blocking input signals (`flagsChanged`, regular key presses, and mouse actions strictly to cancel switching during shortcuts such as `⌘+C` or `⌘+Click`) transiently in volatile memory.",
+          p2: "The characters you type, passwords, and keystroke histories are never recorded to disk or transmitted externally. Switching input sources uses Apple's local Carbon Text Input Source (`TISSelectInputSource`) API offline on your Mac.",
+          p3: "The App runs entirely offline and makes no automatic background network requests. Your default web browser opens an external link only when you explicitly click an optional external link inside the App (such as the Ko-fi development support button or the Privacy Policy link)."
+        },
+        s4: {
+          title: "4. macOS System Permissions (Principle of Least Privilege)",
+          p1: "The App follows the principle of least privilege and requests only the minimum macOS permission required to operate across applications:",
+          items: [
+            { code: "Input Monitoring", codes: ["kTCCServiceListenEvent", "CGEventTapOptions.listenOnly"], desc: "Used solely to detect standalone Left or Right Command taps while other apps are active, without modifying or blocking your keyboard input." },
+            { label: "Permissions Not Requested", desc: "The App does not request Accessibility control (`kTCCServiceAccessibility`), Full Disk Access, Screen Recording, Camera, Microphone, or Contacts, and automatically respects macOS Secure Input protection (for example, password fields)." }
+          ]
+        },
+        s5: {
+          title: "5. Third-Party Services, Analytics, and Advertising",
+          items: [
+            "The App does not include any third-party SDKs, analytics tools, crash reporters, telemetry, or advertising networks.",
+            "The App does not load or execute remotely hosted code.",
+            "We never sell, rent, share, or disclose user data to third parties."
+          ]
+        },
+        s6: {
+          title: "6. Data Retention and Deletion",
+          p1: 'Because no data is collected on any external server, you can permanently remove all local preferences and permissions on your Mac at any time by disabling "Launch at Login" inside the App, deleting `/Applications/LangSwap.app`, running `defaults delete com.studionovaworks.LangSwap` in Terminal, and removing LangSwap from System Settings > Privacy & Security > Input Monitoring.'
+        },
+        s7: {
+          title: "7. Changes to This Privacy Policy",
+          p1: 'We may update this Privacy Policy from time to time to reflect changes in the App\'s features or macOS platform requirements. Any updates will be indicated by updating the "Last Updated" date at the top of this page.'
+        },
+        s8: {
+          title: "8. Developer Information & Related Links",
+          p1: "For general information and updates about this App, please visit:",
+          devLabel: "Developer:",
+          infoLabel: "Information Page:",
+          note: 'Note: This App is a free, independently developed personal tool provided "as is." Dedicated technical support or individual inquiries are generally not provided.'
+        }
+      },
+
+      ja: {
+        dir: "ltr",
+        langLabel: "言語",
+        docTitle: "プライバシーポリシー — LangSwap",
+        h1: "プライバシーポリシー — LangSwap",
+        lastUpdatedLabel: "最終更新日:",
+        lastUpdatedValue: "2026年11月21日",
+        developerLabel: "開発・運営:",
+        developerValue: "Studio Nova Works",
+        intro: "Studio Nova Works（以下「当方」といいます）は、macOS アプリケーション「LangSwap for Mac US Keyboard」（以下「本アプリ」といいます）におけるユーザーのプライバシーおよびデータの保護を重視しています。本プライバシーポリシーでは、本アプリが取り扱う情報および権限の仕組みについて説明します。",
+        s1: {
+          title: "1. 個人データの非収集について",
+          p1: "本アプリは、ユーザーの個人を特定できる情報（氏名、メールアドレス、アカウント認証情報、クレジットカード情報など）、入力した文字列・キー入力ログ、クリップボードの内容、画面表示内容、またはアプリの利用履歴を一切収集・記録・保存・外部送信しません。",
+          p2: "ユーザーアカウントの登録やログイン機能も提供していません。"
+        },
+        s2: {
+          title: "2. Mac 内（ローカル）に保存される設定情報",
+          p1: "本アプリは、設定状態を保持する目的でのみ、以下のユーザー設定情報を macOS 標準の `UserDefaults`（ドメイン `com.studionovaworks.LangSwap`）を通じてお使いの Mac 内に保存します。",
+          items: [
+            "言語切り替え機能の有効／停止状態（`LangSwap.isEnabled`）",
+            "左 Command / 右 Command に割り当てた入力ソース ID（`LangSwap.leftCommandSourceID`、`LangSwap.rightCommandSourceID`）および保存済みプリセット一覧（`LangSwap.presets`）",
+            "単押し判定の最大時間および切り替え通知 HUD の表示設定（`LangSwap.tapTimeoutMs`、`LangSwap.showHUDNotification`）",
+            "起動時バックグラウンド動作、外観モード、表示言語、初回初期設定完了フラグ（`LangSwap.launchInBackground`、`LangSwap.appTheme`、`LangSwap.appLanguage`、`LangSwap.hasInitializedDefaults`）"
+          ],
+          p2: "ユーザーが明示的に「Macログイン時に自動起動」をオンにした場合のみ、macOS 標準の `SMAppService` によりログイン項目としてローカル登録されます。これらの設定情報が当方や第三者のサーバーへ送信・同期されることは一切ありません。"
+        },
+        s3: {
+          title: "3. デバイス内処理と自動通信の不在について",
+          p1: "左右 Command キーの単押しを正確に判定するため、本アプリはハードウェア修飾キー状態やショートカット抑止信号（`⌘+C` や `⌘+クリック` を誤爆させないための `flagsChanged`・他キー押下・マウス操作の有無）をメモリ上で瞬間的に判定するのみであり、文字情報や操作履歴をファイルに保存することはありません。",
+          p2: "入力ソース（言語）の切り替え処理には macOS ローカルの Carbon Text Input Source API（`TISSelectInputSource`）を使用し、すべての処理はお使いの Mac 上でオフライン完結します。",
+          p3: "本アプリはバックグラウンドで外部サーバーへの自動通信を一切行いません。ユーザーが任意でアプリ内の外部リンク（Ko-fi 開発支援ボタンやプライバシーポリシーリンク等）をクリックした場合に限り、標準ブラウザで対象ページを開きます。"
+        },
+        s4: {
+          title: "4. macOS のシステム権限（最小権限の原則）",
+          p1: "本アプリは最小権限の原則に基づき、他アプリケーション利用中にも Command キー単押しを検知するための最小限の権限のみを使用します。",
+          items: [
+            { code: "入力監視（Input Monitoring）", codes: ["kTCCServiceListenEvent", "CGEventTapOptions.listenOnly"], desc: "他アプリ利用中に左右 Command キーの単押しのみを検知する読み取り専用の監視に使用します。通常のキー入力やショートカットの改変・遮断は一切行いません。" },
+            { label: "要求しない権限", desc: "キー送出等を伴う強い「アクセシビリティ権限（`kTCCServiceAccessibility`）」、フルディスクアクセス、画面収録、カメラ、マイク、連絡先等の権限は一切要求しません。また、macOS のセキュア入力保護（パスワード入力欄など）を尊重します。" }
+          ]
+        },
+        s5: {
+          title: "5. 第三者への提供・アクセス解析・広告について",
+          items: [
+            "本アプリは外部サードパーティ製 SDK、Google Analytics 等のアクセス解析、クラッシュレポート送信、トラッキング SDK、広告ネットワークを一切使用していません。",
+            "本アプリは外部サーバーからプログラムコードを動的に取得・実行（リモートコード実行）することはありません。",
+            "ユーザーの情報を第三者へ販売、貸与、共有、または開示することはありません。"
+          ]
+        },
+        s6: {
+          title: "6. データの保持期間と削除方法",
+          p1: "外部サーバー上にデータは一切保存されないため、アプリ内の「Macログイン時に自動起動」をオフにしたうえで `/Applications/LangSwap.app` を削除し、必要に応じてターミナルで `defaults delete com.studionovaworks.LangSwap` を実行し、システム設定＞プライバシーとセキュリティ＞入力監視から `LangSwap` を削除することで、すべてのローカル設定・権限を完全に消去できます。"
+        },
+        s7: {
+          title: "7. プライバシーポリシーの変更",
+          p1: "当方は、本アプリの機能更新や macOS の仕様変更等に伴い、本プライバシーポリシーを改定することがあります。改定時は本ページ上部の「最終更新日」を更新してお知らせします。"
+        },
+        s8: {
+          title: "8. 開発者情報・関連リンク",
+          p1: "本アプリに関する最新情報や公開元情報については、以下のページをご参照ください。",
+          devLabel: "運営者:",
+          infoLabel: "情報公開サイト:",
+          note: "※ 本アプリは無償で提供される個人開発ツールであり、個別の技術サポートやお問い合わせへの対応は原則として行っておりません。あらかじめご了承ください。"
+        }
+      },
+
+      ar: {
+        dir: "rtl",
+        langLabel: "اللغة",
+        docTitle: "سياسة الخصوصية — LangSwap",
+        h1: "سياسة الخصوصية — LangSwap",
+        lastUpdatedLabel: "آخر تحديث:",
+        lastUpdatedValue: "21 نوفمبر 2026",
+        developerLabel: "المطور:",
+        developerValue: "Studio Nova Works",
+        intro: 'تحترم Studio Nova Works ("نحن") خصوصيتك وتلتزم بحماية بياناتك عند استخدام تطبيق macOS المسمى "LangSwap for Mac US Keyboard" ("التطبيق"). توضح سياسة الخصوصية هذه كيفية تعامل التطبيق مع المعلومات.',
+        s1: {
+          title: "1. عدم جمع البيانات الشخصية",
+          p1: "لا يقوم التطبيق بجمع أو تسجيل أو تخزين أو إرسال أي معلومات تعريف شخصية (مثل الاسم أو البريد الإلكتروني أو بيانات اعتماد الحساب أو تفاصيل الدفع) أو النصوص المكتوبة أو سجلات ضغطات المفاتيح أو محتوى الحافظة أو محتوى الشاشة أو سجل استخدام التطبيقات.",
+          p2: "لا يتطلب التطبيق تسجيل مستخدم أو تسجيل الدخول إلى حساب."
+        },
+        s2: {
+          title: "2. الإعدادات المخزنة محليًا على جهاز Mac",
+          p1: "لتذكر تفضيلاتك عبر الجلسات، يخزن التطبيق إعدادات التهيئة التالية فقط محليًا على جهاز Mac باستخدام `UserDefaults` في macOS (نطاق الحزمة `com.studionovaworks.LangSwap`):",
+          items: [
+            "حالة تفعيل أو إيقاف التبديل (`LangSwap.isEnabled`)",
+            "معرفات مصادر الإدخال المعينة لمفتاح Command الأيسر والأيمن (`LangSwap.leftCommandSourceID`، `LangSwap.rightCommandSourceID`) والإعدادات المسبقة المحفوظة (`LangSwap.presets`)",
+            "المدة القصوى للنقر الفردي وتفضيل إشعار الشاشة (`LangSwap.tapTimeoutMs`، `LangSwap.showHUDNotification`)",
+            "سلوك بدء التشغيل، والمظهر، ولغة الواجهة، وعلامة الإعداد الأولي (`LangSwap.launchInBackground`، `LangSwap.appTheme`، `LangSwap.appLanguage`، `LangSwap.hasInitializedDefaults`)"
+          ],
+          p2: "إذا قمت بتمكين «التشغيل عند تسجيل الدخول» صراحةً، يقوم macOS بتسجيل عنصر تسجيل الدخول محليًا عبر إطار عمل Apple `SMAppService`. تبقى جميع الإعدادات على جهازك فقط ولا تتم مزامنتها أو إرسالها أبدًا إلى خوادمنا أو أي طرف ثالث."
+        },
+        s3: {
+          title: "3. المعالجة على الجهاز وعدم وجود اتصال تلقائي بالشبكة",
+          p1: "لتبديل مصادر الإدخال عند النقر الفردي على مفتاح Command الأيسر أو الأيمن، يقوم التطبيق بفحص إشارات المفاتيح وإجراءات الماوس لحظيًا في الذاكرة المؤقتة فقط لمنع التبديل العرضي أثناء اختصارات مثل `⌘+C` أو `⌘+Click`، دون تسجيل أي نص مكتوب أو محفوظات على القرص.",
+          p2: "تستخدم عملية تبديل مصدر الإدخال واجهة برمجة التطبيقات المحلية Carbon Text Input Source (`TISSelectInputSource`) دون اتصال بالإنترنت على جهاز Mac.",
+          p3: "يعمل التطبيق بالكامل دون اتصال بالإنترنت ولا يجري أي طلبات شبكة تلقائية في الخلفية. لا يفتح متصفحك رابطًا خارجيًا إلا إذا نقرت صراحةً على رابط خارجي اختياري داخل التطبيق (مثل زر الدعم عبر Ko-fi أو رابط سياسة الخصوصية)."
+        },
+        s4: {
+          title: "4. أذونات نظام macOS (مبدأ الحد الأدنى من الامتيازات)",
+          p1: "يتبع التطبيق مبدأ الحد الأدنى من الامتيازات ويطلب فقط الحد الأدنى من أذونات macOS اللازمة للعمل عبر التطبيقات:",
+          items: [
+            { code: "مراقبة الإدخال (Input Monitoring)", codes: ["kTCCServiceListenEvent", "CGEventTapOptions.listenOnly"], desc: "يُستخدم فقط للقراءة لاكتشاف النقرات الفردية لمفتاح Command الأيسر أو الأيمن أثناء استخدام التطبيقات الأخرى دون تعديل أو حظر إدخال لوحة المفاتيح." },
+            { label: "أذونات غير مطلوبة", desc: "لا يطلب التطبيق إذن إمكانية الوصول (`kTCCServiceAccessibility`) أو الوصول الكامل للقرص أو تسجيل الشاشة أو الكاميرا أو الميكروفون أو جهات الاتصال، ويحترم تلقائيًا حماية الإدخال الآمن في macOS (مثل حقول كلمات المرور)." }
+          ]
+        },
+        s5: {
+          title: "5. خدمات الطرف الثالث والتحليلات والإعلانات",
+          items: [
+            "لا يتضمن التطبيق أي حزم برمجية خارجية أو أدوات تحليلات أو تقارير أعطال أو شبكات إعلانية.",
+            "لا يقوم التطبيق بتحميل أو تنفيذ تعليمات برمجية مستضافة عن بُعد.",
+            "نحن لا نبيع أو نؤجر أو نشارك أو نكشف بيانات المستخدمين لأي طرف ثالث."
+          ]
+        },
+        s6: {
+          title: "6. الاحتفاظ بالبيانات وحذفها",
+          p1: "نظرًا لعدم جمع أي بيانات على خوادم خارجية، يمكنك حذف جميع التفضيلات والأذونات المحلية نهائيًا في أي وقت عبر تعطيل «التشغيل عند تسجيل الدخول»، وحذف `/Applications/LangSwap.app`، وتنفيذ `defaults delete com.studionovaworks.LangSwap` في Terminal، وإزالة LangSwap من إعدادات النظام > الخصوصية والأمان > مراقبة الإدخال."
+        },
+        s7: {
+          title: "7. التغييرات على سياسة الخصوصية هذه",
+          p1: 'قد نقوم بتحديث سياسة الخصوصية هذه من وقت لآخر لتعكس التغييرات في ميزات التطبيق أو متطلبات نظام macOS. سيتم توضيح أي تحديث بتعديل تاريخ "آخر تحديث" في أعلى هذه الصفحة.'
+        },
+        s8: {
+          title: "8. معلومات المطور والروابط ذات الصلة",
+          p1: "للحصول على المعلومات العامة والتحديثات حول هذا التطبيق، يرجى زيارة:",
+          devLabel: "المطور:",
+          infoLabel: "صفحة المعلومات:",
+          note: "ملاحظة: هذا التطبيق أداة شخصية مجانية ومطورة بشكل مستقل وتُقدم كما هي، ولا يتم توفير دعم فني مخصص أو الرد على الاستفسارات الفردية بشكل عام."
+        }
+      },
+
+      de: {
+        dir: "ltr",
+        langLabel: "Sprache",
+        docTitle: "Datenschutzerklärung — LangSwap",
+        h1: "Datenschutzerklärung — LangSwap",
+        lastUpdatedLabel: "Zuletzt aktualisiert:",
+        lastUpdatedValue: "21. November 2026",
+        developerLabel: "Entwickler:",
+        developerValue: "Studio Nova Works",
+        intro: 'Studio Nova Works („wir“, „uns“) respektiert Ihre Privatsphäre und schützt Ihre Daten bei der Nutzung der macOS-Anwendung „LangSwap for Mac US Keyboard“ (die „App“). Diese Datenschutzerklärung erläutert, wie die App mit Informationen umgeht.',
+        s1: {
+          title: "1. Keine Erhebung personenbezogener Daten",
+          p1: "Die App erhebt, protokolliert, speichert oder überträgt keine personenbezogenen Daten (wie Name, E-Mail-Adresse, Zugangsdaten oder Zahlungsdaten), keine eingegebenen Texte, keine Tastenanschlag-Protokolle, keine Zwischenablageinhalte, keine Bildschirminhalte und keinen Nutzungsverlauf.",
+          p2: "Die App erfordert weder eine Registrierung noch eine Anmeldung."
+        },
+        s2: {
+          title: "2. Lokal auf Ihrem Mac gespeicherte Einstellungen",
+          p1: "Um Ihre Einstellungen sitzungsübergreifend zu behalten, speichert die App ausschließlich folgende Konfigurationsdaten lokal auf Ihrem Mac über `UserDefaults` von macOS (Domain `com.studionovaworks.LangSwap`):",
+          items: [
+            "Aktiv-/Pausiert-Status der Umschaltung (`LangSwap.isEnabled`)",
+            "Zugewiesene Eingabequellen-IDs für linke und rechte Command-Taste (`LangSwap.leftCommandSourceID`, `LangSwap.rightCommandSourceID`) sowie gespeicherte Sprachpaare (`LangSwap.presets`)",
+            "Schwellenwert für Einzeldruckdauer und HUD-Benachrichtigungsoption (`LangSwap.tapTimeoutMs`, `LangSwap.showHUDNotification`)",
+            "Startverhalten, Erscheinungsbild, Sprache der Oberfläche und Ersteinrichtungsstatus (`LangSwap.launchInBackground`, `LangSwap.appTheme`, `LangSwap.appLanguage`, `LangSwap.hasInitializedDefaults`)"
+          ],
+          p2: "Nur wenn Sie „Bei der Anmeldung starten“ aktivieren, registriert macOS den Anmeldeobjekt-Eintrag lokal über Apples `SMAppService`. Alle Daten bleiben ausschließlich auf Ihrem Gerät und werden niemals an Server von Studio Nova Works oder Dritte übertragen."
+        },
+        s3: {
+          title: "3. Lokale Verarbeitung und keine automatische Netzwerkaktivität",
+          p1: "Um beim kurzen Antippen der linken oder rechten Command-Taste umzuschalten, prüft die App flüchtig im Arbeitsspeicher Modifikator-Flags sowie Ereignisse (`flagsChanged`, andere Tasten und Mausklicks ausschließlich zum Abbrechen bei Kürzeln wie `⌘+C` oder `⌘+Klick`).",
+          p2: "Eingegebene Zeichen, Passwörter oder Tastenverläufe werden niemals gespeichert oder übertragen. Das Umschalten der Eingabequelle erfolgt lokal offline über Apples Carbon Text Input Source API (`TISSelectInputSource`).",
+          p3: "Die App arbeitet vollständig offline und führt im Hintergrund keine automatischen Netzwerkanfragen durch. Ihr Browser öffnet nur dann einen externen Link, wenn Sie aktiv auf einen optionalen externen Link in der App klicken (z. B. Ko-fi-Unterstützung oder Datenschutzerklärung)."
+        },
+        s4: {
+          title: "4. macOS-Systemberechtigungen (Prinzip der minimalen Rechte)",
+          p1: "Die App folgt dem Prinzip der minimalen Rechte und fordert nur die unbedingt erforderliche macOS-Berechtigung an:",
+          items: [
+            { code: "Eingabeüberwachung (Input Monitoring)", codes: ["kTCCServiceListenEvent", "CGEventTapOptions.listenOnly"], desc: "Dient ausschließlich dem schreibgeschützten Erkennen einzelner Command-Tastendrücke in aktiven Fremd-Apps, ohne Eingaben zu verändern oder zu blockieren." },
+            { label: "Nicht angeforderte Berechtigungen", desc: "Die App fordert keine Bedienungshilfen-Steuerung (`kTCCServiceAccessibility`), keinen Festplattenvollzugriff, keine Bildschirmaufnahme, Kamera, Mikrofon oder Kontakte an und respektiert automatisch die sichere macOS-Tastatureingabe (z. B. bei Passwortfeldern)." }
+          ]
+        },
+        s5: {
+          title: "5. Drittanbieterdienste, Analysen und Werbung",
+          items: [
+            "Die App enthält keine Drittanbieter-SDKs, Analyse-Tools, Absturzberichte oder Werbenetzwerke.",
+            "Die App lädt keinen extern gehosteten Code nach.",
+            "Wir verkaufen, vermieten, teilen oder offenlegen niemals Nutzerdaten an Dritte."
+          ]
+        },
+        s6: {
+          title: "6. Datenspeicherung und Löschung",
+          p1: "Da keine Daten auf externen Servern liegen, können Sie alle lokalen Einstellungen und Berechtigungen jederzeit vollständig entfernen, indem Sie „Bei der Anmeldung starten“ deaktivieren, `/Applications/LangSwap.app` löschen, im Terminal `defaults delete com.studionovaworks.LangSwap` ausführen und LangSwap unter Systemeinstellungen > Datenschutz & Sicherheit > Eingabeüberwachung entfernen."
+        },
+        s7: {
+          title: "7. Änderungen dieser Datenschutzerklärung",
+          p1: "Wir können diese Datenschutzerklärung aktualisieren, um Änderungen an Funktionen oder macOS-Anforderungen abzubilden. Aktualisierungen werden über das Datum „Zuletzt aktualisiert“ oben auf dieser Seite angezeigt."
+        },
+        s8: {
+          title: "8. Entwicklerinformationen & weiterführende Links",
+          p1: "Allgemeine Informationen und Updates zu dieser App finden Sie unter:",
+          devLabel: "Entwickler:",
+          infoLabel: "Informationsseite:",
+          note: "Hinweis: Diese App ist ein kostenloses, unabhängig entwickeltes privates Tool und wird ohne Gewähr bereitgestellt. Ein dedizierter technischer Support oder die Beantwortung individueller Anfragen wird grundsätzlich nicht angeboten."
+        }
+      },
+
+      es: {
+        dir: "ltr",
+        langLabel: "Idioma",
+        docTitle: "Política de Privacidad — LangSwap",
+        h1: "Política de Privacidad — LangSwap",
+        lastUpdatedLabel: "Última actualización:",
+        lastUpdatedValue: "21 de noviembre de 2026",
+        developerLabel: "Desarrollador:",
+        developerValue: "Studio Nova Works",
+        intro: 'Studio Nova Works ("nosotros") respeta su privacidad y se compromete a proteger sus datos al utilizar la aplicación para macOS "LangSwap for Mac US Keyboard" (la "App"). Esta Política de Privacidad explica cómo la App trata la información.',
+        s1: {
+          title: "1. Sin recopilación de datos personales",
+          p1: "La App no recopila, registra, almacena ni transmite ningún dato personal (como nombre, correo, credenciales o pagos), texto escrito, historial de pulsaciones, contenido del portapapeles, capturas de pantalla ni historial de uso de aplicaciones.",
+          p2: "La App no requiere registro ni inicio de sesión."
+        },
+        s2: {
+          title: "2. Configuración almacenada localmente en su Mac",
+          p1: "Para recordar sus preferencias entre sesiones, la App guarda únicamente los siguientes ajustes localmente en su Mac mediante `UserDefaults` de macOS (dominio `com.studionovaworks.LangSwap`):",
+          items: [
+            "Estado activo/en pausa de la App (`LangSwap.isEnabled`)",
+            "IDs de fuente de entrada asignados a Command izquierda y derecha (`LangSwap.leftCommandSourceID`, `LangSwap.rightCommandSourceID`) y pares guardados (`LangSwap.presets`)",
+            "Duración máxima de toque simple y preferencia de notificación en pantalla (`LangSwap.tapTimeoutMs`, `LangSwap.showHUDNotification`)",
+            "Comportamiento de inicio, apariencia, idioma de interfaz y marca de configuración inicial (`LangSwap.launchInBackground`, `LangSwap.appTheme`, `LangSwap.appLanguage`, `LangSwap.hasInitializedDefaults`)"
+          ],
+          p2: "Solo si activa explícitamente «Abrir al iniciar sesión», macOS registra el ítem de inicio localmente con `SMAppService` de Apple. Todos los ajustes permanecen en su Mac y nunca se sincronizan con servidores de Studio Nova Works ni con terceros."
+        },
+        s3: {
+          title: "3. Procesamiento local y cero actividad automática de red",
+          p1: "Para cambiar de fuente de entrada con un toque breve en Command izquierda o derecha, la App evalúa de forma efímera en memoria volátil el estado de las teclas modificadoras y acciones (`flagsChanged`, pulsaciones de teclas y clics únicamente para cancelar el cambio durante atajos como `⌘+C` o `⌘+Clic`).",
+          p2: "Los caracteres que escribe, contraseñas o pulsaciones jamás se graban en disco ni se envían fuera de su equipo. El cambio de idioma utiliza localmente la API Carbon Text Input Source (`TISSelectInputSource`) sin conexión.",
+          p3: "La App funciona íntegramente sin conexión y no realiza solicitudes automáticas en segundo plano. El navegador solo abre un enlace externo si usted pulsa voluntariamente un enlace externo opcional dentro de la App (como el botón de apoyo en Ko-fi o el enlace a la Política de privacidad)."
+        },
+        s4: {
+          title: "4. Permisos del sistema macOS (Principio de mínimo privilegio)",
+          p1: "La App aplica el principio de mínimo privilegio y solo solicita el permiso mínimo indispensable para funcionar entre aplicaciones:",
+          items: [
+            { code: "Monitorización de entrada (Input Monitoring)", codes: ["kTCCServiceListenEvent", "CGEventTapOptions.listenOnly"], desc: "Se usa en modo de solo lectura exclusivamente para detectar toques individuales de Command izquierda o derecha mientras usa otras aplicaciones, sin modificar ni bloquear su teclado." },
+            { label: "Permisos no solicitados", desc: "La App no solicita control de Accesibilidad (`kTCCServiceAccessibility`), Acceso total al disco, Grabación de pantalla, Cámara, Micrófono ni Contactos, y respeta automáticamente la entrada segura de macOS (como campos de contraseña)." }
+          ]
+        },
+        s5: {
+          title: "5. Servicios de terceros, analíticas y publicidad",
+          items: [
+            "La App no incluye SDK de terceros, herramientas de analítica, informes de fallos ni redes publicitarias.",
+            "La App no descarga ni ejecuta código alojado de forma remota.",
+            "Nunca vendemos, alquilamos, compartimos ni divulgamos datos de usuarios a terceros."
+          ]
+        },
+        s6: {
+          title: "6. Conservación y eliminación de datos",
+          p1: "Dado que no existe ningún dato en servidores externos, puede eliminar permanentemente todos los ajustes locales desactivando «Abrir al iniciar sesión», borrando `/Applications/LangSwap.app`, ejecutando `defaults delete com.studionovaworks.LangSwap` en Terminal y quitando LangSwap en Ajustes del Sistema > Privacidad y seguridad > Monitorización de entrada."
+        },
+        s7: {
+          title: "7. Cambios en esta Política de Privacidad",
+          p1: 'Podemos actualizar esta Política de Privacidad periódicamente para reflejar cambios en las funciones de la App o requisitos de macOS. Cualquier actualización se indicará en la fecha de "Última actualización" al principio de esta página.'
+        },
+        s8: {
+          title: "8. Información del desarrollador y enlaces relacionados",
+          p1: "Para obtener información general y novedades sobre esta App, visite:",
+          devLabel: "Desarrollador:",
+          infoLabel: "Página de información:",
+          note: 'Nota: Esta App es una herramienta personal gratuita y desarrollada de forma independiente, proporcionada "tal cual". Por lo general, no se ofrece soporte técnico dedicado ni atención a consultas individuales.'
+        }
+      },
+
+      fr: {
+        dir: "ltr",
+        langLabel: "Langue",
+        docTitle: "Politique de confidentialité — LangSwap",
+        h1: "Politique de confidentialité — LangSwap",
+        lastUpdatedLabel: "Dernière mise à jour :",
+        lastUpdatedValue: "21 novembre 2026",
+        developerLabel: "Développeur :",
+        developerValue: "Studio Nova Works",
+        intro: 'Studio Nova Works (« nous ») respecte votre vie privée et s’engage à protéger vos données lors de l’utilisation de l’application macOS « LangSwap for Mac US Keyboard » (l’« App »). Cette politique explique comment l’App traite les informations.',
+        s1: {
+          title: "1. Aucune collecte de données personnelles",
+          p1: "L’App ne collecte, n’enregistre, ne stocke et ne transmet aucune donnée personnelle (nom, adresse e-mail, identifiants ou coordonnées bancaires), aucun texte saisi, journal de frappes, contenu du presse-papiers, capture d’écran ni historique d’utilisation d’applications.",
+          p2: "L’App ne nécessite ni inscription ni connexion à un compte."
+        },
+        s2: {
+          title: "2. Paramètres stockés localement sur votre Mac",
+          p1: "Pour mémoriser vos préférences entre les sessions, l’App enregistre uniquement les paramètres suivants en local sur votre Mac via `UserDefaults` de macOS (domaine `com.studionovaworks.LangSwap`) :",
+          items: [
+            "État actif ou en pause (`LangSwap.isEnabled`)",
+            "Identifiants des sources d’entrée attribuées aux touches Command gauche et droite (`LangSwap.leftCommandSourceID`, `LangSwap.rightCommandSourceID`) et préréglages enregistrés (`LangSwap.presets`)",
+            "Durée maximale d’appui court et affichage de la notification à l’écran (`LangSwap.tapTimeoutMs`, `LangSwap.showHUDNotification`)",
+            "Comportement au démarrage, thème d’apparence, langue de l’interface et indicateur de configuration initiale (`LangSwap.launchInBackground`, `LangSwap.appTheme`, `LangSwap.appLanguage`, `LangSwap.hasInitializedDefaults`)"
+          ],
+          p2: "Si vous activez « Ouvrir à l’ouverture de session », macOS enregistre l’élément de session localement via `SMAppService` d’Apple. Tous les réglages restent exclusivement sur votre appareil et ne sont jamais transmis à Studio Nova Works ni à des tiers."
+        },
+        s3: {
+          title: "3. Traitement local et aucune activité réseau automatique",
+          p1: "Pour basculer de langue lors d’un appui court sur Command gauche ou droite, l’App analyse de façon éphémère en mémoire vive l’état des touches modificatrices et les actions clavier/souris (`flagsChanged`, touches et clics uniquement pour annuler lors des raccourcis comme `⌘+C` ou `⌘+Clic`).",
+          p2: "Les caractères saisis, mots de passe et historiques de frappe ne sont jamais enregistrés sur disque ni envoyés à l’extérieur. Le changement de langue utilise localement l’API Carbon Text Input Source (`TISSelectInputSource`) hors ligne.",
+          p3: "L’App fonctionne entièrement hors ligne et n’effectue aucune requête réseau automatique. Votre navigateur n’ouvre un lien externe que si vous cliquez explicitement sur un lien externe facultatif dans l’App (tel que le bouton de soutien Ko-fi ou le lien vers la politique de confidentialité)."
+        },
+        s4: {
+          title: "4. Autorisations système macOS (Principe du moindre privilège)",
+          p1: "L’App applique le principe du moindre privilège et ne demande que l’autorisation minimale requise :",
+          items: [
+            { code: "Surveillance de l’entrée (Input Monitoring)", codes: ["kTCCServiceListenEvent", "CGEventTapOptions.listenOnly"], desc: "Utilisée uniquement en lecture seule pour détecter les appuis brefs sur Command gauche/droite dans toutes les applications, sans modifier ni bloquer vos frappes." },
+            { label: "Autorisations non demandées", desc: "L’App ne demande pas l’autorisation Accessibilité (`kTCCServiceAccessibility`), Accès complet au disque, Enregistrement de l’écran, Appareil photo, Micro ou Contacts, et respecte automatiquement la saisie sécurisée de macOS (champs de mot de passe)." }
+          ]
+        },
+        s5: {
+          title: "5. Services tiers, statistiques et publicité",
+          items: [
+            "L’App n’intègre aucun SDK tiers, outil d’analyse, rapport de plantage ou réseau publicitaire.",
+            "L’App ne charge ni n’exécute aucun code hébergé à distance.",
+            "Nous ne vendons, ne louons, ne partageons ni ne divulguons aucune donnée utilisateur à des tiers."
+          ]
+        },
+        s6: {
+          title: "6. Conservation et suppression des données",
+          p1: "Aucune donnée n’étant conservée sur un serveur externe, vous pouvez tout supprimer définitivement en désactivant l’ouverture à la session, en supprimant `/Applications/LangSwap.app`, en exécutant `defaults delete com.studionovaworks.LangSwap` dans Terminal et en retirant LangSwap dans Réglages Système > Confidentialité et sécurité > Surveillance de l’entrée."
+        },
+        s7: {
+          title: "7. Modifications de cette politique",
+          p1: "Nous pouvons mettre à jour cette politique de confidentialité pour refléter l’évolution de l’App ou des exigences macOS. Toute révision est signalée par la date « Dernière mise à jour » en haut de cette page."
+        },
+        s8: {
+          title: "8. Informations sur le développeur et liens utiles",
+          p1: "Pour obtenir des informations générales et les mises à jour concernant cette App, veuillez consulter :",
+          devLabel: "Développeur :",
+          infoLabel: "Page d’information :",
+          note: "Note : Cette App est un outil personnel gratuit et indépendant fourni « tel quel ». Aucun support technique dédié ni traitement des demandes individuelles n’est en principe proposé."
+        }
+      },
+
+      hi: {
+        dir: "ltr",
+        langLabel: "भाषा",
+        docTitle: "गोपनीयता नीति — LangSwap",
+        h1: "गोपनीयता नीति — LangSwap",
+        lastUpdatedLabel: "अंतिम अपडेट:",
+        lastUpdatedValue: "21 नवंबर 2026",
+        developerLabel: "डेवलपर:",
+        developerValue: "Studio Nova Works",
+        intro: 'Studio Nova Works ("हम") macOS एप्लिकेशन "LangSwap for Mac US Keyboard" ("ऐप") का उपयोग करते समय आपकी गोपनीयता और डेटा सुरक्षा के लिए प्रतिबद्ध है। यह गोपनीयता नीति बताती है कि ऐप जानकारी को कैसे संभालता है।',
+        s1: {
+          title: "1. व्यक्तिगत डेटा का संग्रह न करना",
+          p1: "यह ऐप कोई भी व्यक्तिगत जानकारी (जैसे नाम, ईमेल, खाता विवरण या भुगतान जानकारी), टाइप किया गया टेक्स्ट, कीस्ट्रोक लॉग, क्लिपबोर्ड सामग्री, स्क्रीन सामग्री या ऐप उपयोग इतिहास एकत्र, रिकॉर्ड, संग्रहीत या प्रसारित नहीं करता है।",
+          p2: "ऐप के लिए उपयोगकर्ता पंजीकरण या लॉगिन आवश्यक नहीं है।"
+        },
+        s2: {
+          title: "2. आपके Mac पर स्थानीय रूप से सहेजी गई सेटिंग्स",
+          p1: "सत्रों के बीच आपकी प्राथमिकताएँ याद रखने के लिए, ऐप केवल निम्नलिखित सेटिंग्स को macOS `UserDefaults` (`com.studionovaworks.LangSwap`) में स्थानीय रूप से सहेजता है:",
+          items: [
+            "स्विचिंग चालू/रुका हुआ स्थिति (`LangSwap.isEnabled`)",
+            "बाएँ और दाएँ Command कुंजी के इनपुट स्रोत ID (`LangSwap.leftCommandSourceID`, `LangSwap.rightCommandSourceID`) और सहेजे गए भाषा जोड़े (`LangSwap.presets`)",
+            "सिंगल-टैप अधिकतम समय और स्क्रीन सूचना विकल्प (`LangSwap.tapTimeoutMs`, `LangSwap.showHUDNotification`)",
+            "स्टार्टअप व्यवहार, थीम, UI भाषा और प्रारंभिक सेटअप ध्वज (`LangSwap.launchInBackground`, `LangSwap.appTheme`, `LangSwap.appLanguage`, `LangSwap.hasInitializedDefaults`)"
+          ],
+          p2: "यदि आप 'लॉगिन पर स्वतः लॉन्च करें' चालू करते हैं, तो macOS Apple के `SMAppService` द्वारा स्थानीय रूप से लॉगिन आइटम पंजीकृत करता है। सभी सेटिंग्स केवल आपके Mac पर रहती हैं और कभी किसी बाहरी सर्वर पर नहीं भेजी जातीं।"
+        },
+        s3: {
+          title: "3. डिवाइस पर प्रोसेसिंग और शून्य स्वचालित नेटवर्क गतिविधि",
+          p1: "बाएँ या दाएँ Command को एक बार टैप करने पर भाषा बदलने के लिए, ऐप अस्थायी मेमोरी में केवल मॉडिफायर फ्लैग और `⌘+C` या `⌘+Click` जैसे शॉर्टकट रद्द करने वाले संकेतों की जांच करता है। कोई भी अक्षर या पासवर्ड कभी रिकॉर्ड नहीं होता।",
+          p2: "इनपुट स्रोत बदलना macOS के स्थानीय Carbon Text Input Source API (`TISSelectInputSource`) का उपयोग करके पूरी तरह ऑफ़लाइन होता है।",
+          p3: "ऐप पूरी तरह ऑफ़लाइन चलता है और बैकग्राउंड में कोई नेटवर्क अनुरोध नहीं करता। केवल जब आप स्वयं ऐप के भीतर किसी वैकल्पिक बाहरी लिंक (जैसे Ko-fi समर्थन बटन या गोपनीयता नीति लिंक) पर क्लिक करते हैं तभी आपका ब्राउज़र खुलता है।"
+        },
+        s4: {
+          title: "4. macOS सिस्टम अनुमतियाँ (न्यूनतम अधिकार सिद्धांत)",
+          p1: "ऐप न्यूनतम अधिकार सिद्धांत का पालन करता है और केवल आवश्यक न्यूनतम अनुमति ही मांगता है:",
+          items: [
+            { code: "इनपुट निगरानी (Input Monitoring)", codes: ["kTCCServiceListenEvent", "CGEventTapOptions.listenOnly"], desc: "अन्य ऐप्स सक्रिय रहते समय केवल बाएँ/दाएँ Command टैप पहचानने हेतु रीड-ओनली रूप से उपयोग किया जाता है, बिना कीबोर्ड इनपुट को बदले या रोके।" },
+            { label: "न माँगी जाने वाली अनुमतियाँ", desc: "ऐप एक्सेसिबिलिटी नियंत्रण (`kTCCServiceAccessibility`), पूर्ण डिस्क पहुँच, स्क्रीन रिकॉर्डिंग, कैमरा, माइक्रोफ़ोन या संपर्क नहीं मांगता और macOS सुरक्षित इनपुट (जैसे पासवर्ड फ़ील्ड) का सम्मान करता है।" }
+          ]
+        },
+        s5: {
+          title: "5. तृतीय-पक्ष सेवाएँ, एनालिटिक्स और विज्ञापन",
+          items: [
+            "ऐप किसी भी तृतीय-पक्ष SDK, एनालिटिक्स, क्रैश रिपोर्टर या विज्ञापन नेटवर्क का उपयोग नहीं करता।",
+            "ऐप दूरस्थ सर्वर से कोई कोड लोड या निष्पादित नहीं करता।",
+            "हम उपयोगकर्ता डेटा को कभी बेचते, किराए पर देते या साझा नहीं करते।"
+          ]
+        },
+        s6: {
+          title: "6. डेटा प्रतिधारण और हटाना",
+          p1: "चूँकि किसी बाहरी सर्वर पर कोई डेटा नहीं है, आप ऐप में लॉगिन पर लॉन्च बंद करके, `/Applications/LangSwap.app` हटाकर, टर्मिनल में `defaults delete com.studionovaworks.LangSwap` चलाकर और सिस्टम सेटिंग्स > गोपनीयता और सुरक्षा > इनपुट निगरानी से हटाकर सभी स्थानीय डेटा पूरी तरह मिटा सकते हैं।"
+        },
+        s7: {
+          title: "7. इस गोपनीयता नीति में बदलाव",
+          p1: 'ऐप की सुविधाओं या macOS आवश्यकताओं के अनुसार हम इस गोपनीयता नीति को समय-समय पर अपडेट कर सकते हैं। किसी भी बदलाव को पृष्ठ के शीर्ष पर "अंतिम अपडेट" तिथि बदलकर दर्शाया जाएगा।'
+        },
+        s8: {
+          title: "8. डेवलपर जानकारी और संबंधित लिंक",
+          p1: "इस ऐप की सामान्य जानकारी और अपडेट के लिए कृपया यहाँ जाएँ:",
+          devLabel: "डेवलपर:",
+          infoLabel: "सूचना पृष्ठ:",
+          note: 'नोट: यह ऐप एक निःशुल्क, स्वतंत्र रूप से विकसित व्यक्तिगत टूल है जो "जैसा है" के आधार पर प्रदान किया जाता है। समर्पित तकनीकी सहायता या व्यक्तिगत पूछताछ आमतौर पर प्रदान नहीं की जाती है।'
+        }
+      },
+
+      id: {
+        dir: "ltr",
+        langLabel: "Bahasa",
+        docTitle: "Kebijakan Privasi — LangSwap",
+        h1: "Kebijakan Privasi — LangSwap",
+        lastUpdatedLabel: "Terakhir Diperbarui:",
+        lastUpdatedValue: "21 November 2026",
+        developerLabel: "Pengembang:",
+        developerValue: "Studio Nova Works",
+        intro: 'Studio Nova Works ("kami") menghargai privasi Anda dan berkomitmen melindungi data Anda saat menggunakan aplikasi macOS "LangSwap for Mac US Keyboard" ("Aplikasi"). Kebijakan Privasi ini menjelaskan bagaimana Aplikasi menangani informasi.',
+        s1: {
+          title: "1. Tidak Ada Pengumpulan Data Pribadi",
+          p1: "Aplikasi tidak mengumpulkan, mencatat, menyimpan, atau mengirim informasi pribadi (seperti nama, email, kredensial akun, atau rincian pembayaran), teks yang diketik, log penekanan tombol, isi papan klip, tampilan layar, atau riwayat penggunaan aplikasi.",
+          p2: "Aplikasi tidak memerlukan pendaftaran atau login akun."
+        },
+        s2: {
+          title: "2. Pengaturan yang Disimpan secara Lokal di Mac Anda",
+          p1: "Untuk mengingat preferensi Anda antar sesi, Aplikasi hanya menyimpan pengaturan berikut secara lokal menggunakan `UserDefaults` macOS (domain `com.studionovaworks.LangSwap`):",
+          items: [
+            "Status aktif/dijeda (`LangSwap.isEnabled`)",
+            "ID sumber input Command Kiri & Kanan (`LangSwap.leftCommandSourceID`, `LangSwap.rightCommandSourceID`) dan preset tersimpan (`LangSwap.presets`)",
+            "Batas waktu ketuk tunggal dan notifikasi HUD (`LangSwap.tapTimeoutMs`, `LangSwap.showHUDNotification`)",
+            "Perilaku mulai, tema tampilan, bahasa UI, dan status pengaturan awal (`LangSwap.launchInBackground`, `LangSwap.appTheme`, `LangSwap.appLanguage`, `LangSwap.hasInitializedDefaults`)"
+          ],
+          p2: "Hanya jika Anda mengaktifkan 'Jalankan saat Login', macOS mendaftarkan item masuk secara lokal melalui `SMAppService` Apple. Semua pengaturan tetap berada di perangkat Anda dan tidak pernah dikirim ke server Studio Nova Works maupun pihak ketiga."
+        },
+        s3: {
+          title: "3. Pemrosesan Lokal & Tanpa Aktivitas Jaringan Otomatis",
+          p1: "Untuk beralih bahasa saat Command Kiri atau Kanan diketuk singkat, Aplikasi mengevaluasi status tombol pengubah dan sinyal pintasan (`flagsChanged`, penekanan tombol, dan klik untuk membatalkan pintasan seperti `⌘+C` atau `⌘+Klik`) secara sementara di memori tanpa menulis teks ke disk.",
+          p2: "Penggantian sumber input dilakukan secara lokal offline melalui API Carbon Text Input Source (`TISSelectInputSource`) di Mac Anda.",
+          p3: "Aplikasi berjalan sepenuhnya offline tanpa permintaan jaringan otomatis di latar belakang. Browser hanya membuka tautan luar jika Anda secara sukarela mengeklik tautan eksternal opsional di dalam Aplikasi (seperti tombol dukungan Ko-fi atau tautan Kebijakan Privasi)."
+        },
+        s4: {
+          title: "4. Izin Sistem macOS (Prinsip Hak Istimewa Minimal)",
+          p1: "Aplikasi menerapkan prinsip hak istimewa minimal dan hanya meminta satu izin macOS yang diperlukan:",
+          items: [
+            { code: "Pemantauan Input (Input Monitoring)", codes: ["kTCCServiceListenEvent", "CGEventTapOptions.listenOnly"], desc: "Hanya digunakan dalam mode baca-saja untuk mendeteksi ketukan Command Kiri/Kanan di seluruh aplikasi tanpa mengubah atau memblokir input keyboard Anda." },
+            { label: "Izin yang Tidak Diminta", desc: "Aplikasi tidak meminta kontrol Aksesibilitas (`kTCCServiceAccessibility`), Akses Disk Penuh, Perekaman Layar, Kamera, Mikrofon, atau Kontak, serta menghormati mode Secure Input macOS (misalnya kolom kata sandi)." }
+          ]
+        },
+        s5: {
+          title: "5. Layanan Pihak Ketiga, Analitik, dan Iklan",
+          items: [
+            "Aplikasi tidak menggunakan SDK pihak ketiga, alat analitik, pelapor kerusakan, atau jaringan iklan.",
+            "Aplikasi tidak memuat atau menjalankan kode dari server jarak jauh.",
+            "Kami tidak pernah menjual, menyewakan, membagikan, atau mengungkapkan data pengguna kepada pihak ketiga."
+          ]
+        },
+        s6: {
+          title: "6. Penyimpanan dan Penghapusan Data",
+          p1: "Karena tidak ada data di server eksternal, Anda dapat menghapus semua data lokal kapan saja dengan mematikan 'Jalankan saat Login', menghapus `/Applications/LangSwap.app`, menjalankan `defaults delete com.studionovaworks.LangSwap` di Terminal, dan menghapus LangSwap di Pengaturan Sistem > Privasi & Keamanan > Pemantauan Input."
+        },
+        s7: {
+          title: "7. Perubahan pada Kebijakan Privasi Ini",
+          p1: 'Kami dapat memperbarui Kebijakan Privasi ini sewaktu-waktu untuk menyesuaikan pembaruan fitur atau ketentuan macOS. Pembaruan ditandai dengan tanggal "Terakhir Diperbarui" di bagian atas halaman ini.'
+        },
+        s8: {
+          title: "8. Informasi Pengembang & Tautan Terkait",
+          p1: "Untuk informasi umum dan pembaruan mengenai Aplikasi ini, silakan kunjungi:",
+          devLabel: "Pengembang:",
+          infoLabel: "Halaman Informasi:",
+          note: 'Catatan: Aplikasi ini adalah alat pribadi gratis yang dikembangkan secara independen dan disediakan "sebagaimana adanya". Dukungan teknis khusus atau pertanyaan individu umumnya tidak disediakan.'
+        }
+      },
+
+      it: {
+        dir: "ltr",
+        langLabel: "Lingua",
+        docTitle: "Informativa sulla Privacy — LangSwap",
+        h1: "Informativa sulla Privacy — LangSwap",
+        lastUpdatedLabel: "Ultimo aggiornamento:",
+        lastUpdatedValue: "21 novembre 2026",
+        developerLabel: "Sviluppatore:",
+        developerValue: "Studio Nova Works",
+        intro: 'Studio Nova Works ("noi") rispetta la tua privacy e protegge i tuoi dati durante l’uso dell’applicazione macOS "LangSwap for Mac US Keyboard" ("App"). Questa informativa spiega come l’App gestisce le informazioni.',
+        s1: {
+          title: "1. Nessuna raccolta di dati personali",
+          p1: "L’App non raccoglie, registra, archivia o trasmette dati personali (nome, email, credenziali o pagamenti), testi digitati, sequenze di tasti, contenuto degli appunti, schermo o cronologia di utilizzo delle app.",
+          p2: "L’App non richiede registrazione né accesso ad alcun account."
+        },
+        s2: {
+          title: "2. Impostazioni salvate localmente sul Mac",
+          p1: "Per conservare le tue preferenze tra le sessioni, l’App salva localmente sul Mac tramite `UserDefaults` di macOS (`com.studionovaworks.LangSwap`) esclusivamente:",
+          items: [
+            "Stato attivo o in pausa (`LangSwap.isEnabled`)",
+            "ID delle sorgenti di input assegnate a Command sinistro e destro (`LangSwap.leftCommandSourceID`, `LangSwap.rightCommandSourceID`) e preset salvati (`LangSwap.presets`)",
+            "Durata massima del tocco singolo e notifica su schermo (`LangSwap.tapTimeoutMs`, `LangSwap.showHUDNotification`)",
+            "Avvio in background, tema, lingua dell’interfaccia e stato iniziale (`LangSwap.launchInBackground`, `LangSwap.appTheme`, `LangSwap.appLanguage`, `LangSwap.hasInitializedDefaults`)"
+          ],
+          p2: "Solo se attivi «Avvia al login», macOS registra localmente l’elemento di login tramite `SMAppService` di Apple. Tutte le impostazioni restano sul dispositivo e non vengono mai sincronizzate o inviate a server di Studio Nova Works o terzi."
+        },
+        s3: {
+          title: "3. Elaborazione locale e zero attività di rete automatica",
+          p1: "Per cambiare lingua al tocco breve di Command sinistro o destro, l’App verifica in memoria volatile solo gli stati dei modificatori e le interazioni (`flagsChanged`, tasti e clic per annullare le scorciatoie come `⌘+C` o `⌘+Clic`), senza mai registrare testi o password su disco.",
+          p2: "Il cambio della sorgente di input avviene localmente offline tramite l’API Carbon Text Input Source (`TISSelectInputSource`) di macOS.",
+          p3: "L’App funziona interamente offline e non effettua richieste di rete automatiche. Il browser apre un sito esterno solo se scegli volontariamente di fare clic su un link esterno facoltativo nell’App (ad esempio il pulsante di supporto Ko-fi o il link all’Informativa sulla privacy)."
+        },
+        s4: {
+          title: "4. Permessi di sistema macOS (Principio del privilegio minimo)",
+          p1: "L’App segue il principio del privilegio minimo e richiede solo il permesso essenziale:",
+          items: [
+            { code: "Monitoraggio input (Input Monitoring)", codes: ["kTCCServiceListenEvent", "CGEventTapOptions.listenOnly"], desc: "Usato in sola lettura esclusivamente per rilevare tocchi singoli di Command sinistro/destro nelle altre app, senza modificare né bloccare la tastiera." },
+            { label: "Permessi non richiesti", desc: "L’App non richiede controllo Accessibilità (`kTCCServiceAccessibility`), Accesso completo al disco, Registrazione schermo, Fotocamera, Microfono o Contatti, e rispetta automaticamente la protezione Secure Input di macOS (campi password)." }
+          ]
+        },
+        s5: {
+          title: "5. Servizi di terze parti, analisi e pubblicità",
+          items: [
+            "L’App non include SDK di terze parti, strumenti di analisi, report di arresto anomalo o reti pubblicitarie.",
+            "L’App non carica né esegue codice ospitato in remoto.",
+            "Non vendiamo, affittiamo, condividiamo né divulghiamo mai dati degli utenti a terzi."
+          ]
+        },
+        s6: {
+          title: "6. Conservazione ed eliminazione dei dati",
+          p1: "Poiché non vi sono dati su server esterni, puoi rimuovere definitivamente ogni traccia locale disattivando «Avvia al login», eliminando `/Applications/LangSwap.app`, eseguendo `defaults delete com.studionovaworks.LangSwap` nel Terminale e rimuovendo LangSwap da Impostazioni di Sistema > Privacy e sicurezza > Monitoraggio input."
+        },
+        s7: {
+          title: "7. Modifiche alla presente informativa",
+          p1: "Potremmo aggiornare questa informativa per riflettere modifiche alle funzionalità dell’App o ai requisiti macOS. Eventuali aggiornamenti saranno indicati dalla data «Ultimo aggiornamento» in cima alla pagina."
+        },
+        s8: {
+          title: "8. Informazioni sullo sviluppatore e link utili",
+          p1: "Per informazioni generali e aggiornamenti su questa App, visita:",
+          devLabel: "Sviluppatore:",
+          infoLabel: "Pagina informativa:",
+          note: "Nota: Questa App è uno strumento personale gratuito sviluppato in modo indipendente e fornito «così com’è». In genere non vengono forniti supporto tecnico dedicato o risposte a richieste individuali."
+        }
+      },
+
+      ko: {
+        dir: "ltr",
+        langLabel: "언어",
+        docTitle: "개인정보 처리방침 — LangSwap",
+        h1: "개인정보 처리방침 — LangSwap",
+        lastUpdatedLabel: "최종 업데이트:",
+        lastUpdatedValue: "2026년 11월 21일",
+        developerLabel: "개발자:",
+        developerValue: "Studio Nova Works",
+        intro: 'Studio Nova Works(이하 "당사")는 macOS 애플리케이션 "LangSwap for Mac US Keyboard"(이하 "앱")를 사용할 때 사용자의 개인정보와 데이터를 보호하기 위해 최선을 다하고 있습니다. 본 방침은 앱의 정보 처리 방식을 설명합니다.',
+        s1: {
+          title: "1. 개인정보 수집 안 함",
+          p1: "본 앱은 이름, 이메일, 계정 정보, 결제 정보 등 개인을 식별할 수 있는 정보는 물론 입력한 텍스트, 키 입력 로그, 클립보드 내용, 화면 내용, 앱 사용 기록을 일절 수집, 기록, 저장 또는 외부 전송하지 않습니다.",
+          p2: "회원 가입이나 계정 로그인이 필요하지 않습니다."
+        },
+        s2: {
+          title: "2. Mac 내에 로컬 저장되는 설정 정보",
+          p1: "세션 간 설정 유지를 위해 앱은 macOS `UserDefaults`(도메인 `com.studionovaworks.LangSwap`)를 사용하여 다음 설정만 로컬 기기에 저장합니다.",
+          items: [
+            "전환 기능 활성화/일시 중지 상태(`LangSwap.isEnabled`)",
+            "왼쪽/오른쪽 Command 키에 지정된 입력 소스 ID(`LangSwap.leftCommandSourceID`, `LangSwap.rightCommandSourceID`) 및 저장된 프리셋(`LangSwap.presets`)",
+            "단독 탭 최대 시간 및 화면 전환 알림 표시 여부(`LangSwap.tapTimeoutMs`, `LangSwap.showHUDNotification`)",
+            "시작 동작, 화면 모드, 표시 언어, 초기 설정 완료 플래그(`LangSwap.launchInBackground`, `LangSwap.appTheme`, `LangSwap.appLanguage`, `LangSwap.hasInitializedDefaults`)"
+          ],
+          p2: "'로그인 시 자동 실행'을 직접 켠 경우에만 macOS `SMAppService`를 통해 로컬 로그인 항목으로 등록됩니다. 모든 설정은 기기에만 남으며 외부 서버와 동기화되거나 제3자에게 전송되지 않습니다."
+        },
+        s3: {
+          title: "3. 온디바이스 처리 및 자동 네트워크 통신 없음",
+          p1: "왼쪽 또는 오른쪽 Command 키 단독 탭을 감지하기 위해 앱은 `⌘+C`나 `⌘+클릭` 같은 단축키 실행 시 전환을 취소할 용도로만 휘발성 메모리상에서 키 및 마우스 상태를 일시 평가하며, 입력 문자나 비밀번호를 디스크에 기록하지 않습니다.",
+          p2: "입력 소스 전환은 macOS 로컬 Carbon Text Input Source API(`TISSelectInputSource`)를 통해 오프라인으로 처리됩니다.",
+          p3: "앱은 완전히 오프라인으로 동작하며 백그라운드에서 자동 네트워크 요청을 보내지 않습니다. 사용자가 직접 앱 내의 선택적 외부 링크(Ko-fi 후원 버튼 또는 개인정보 처리방침 링크 등)를 클릭한 경우에만 기본 브라우저에서 외부 링크가 열립니다."
+        },
+        s4: {
+          title: "4. macOS 시스템 권한 (최소 권한 원칙)",
+          p1: "앱은 최소 권한 원칙에 따라 꼭 필요한 권한만 사용합니다.",
+          items: [
+            { code: "입력 모니터링(Input Monitoring)", codes: ["kTCCServiceListenEvent", "CGEventTapOptions.listenOnly"], desc: "다른 앱 사용 중 왼쪽/오른쪽 Command 단독 탭만 감지하기 위한 읽기 전용 권한으로만 사용되며, 키 입력을 수정하거나 차단하지 않습니다." },
+            { label: "요청하지 않는 권한", desc: "손쉬운 사용 제어(`kTCCServiceAccessibility`), 전체 디스크 접근, 화면 기록, 카메라, 마이크, 연락처 권한을 요청하지 않으며 macOS 보안 입력(비밀번호 입력 등)을 자동으로 존중합니다." }
+          ]
+        },
+        s5: {
+          title: "5. 제3자 서비스, 분석 및 광고",
+          items: [
+            "앱은 타사 SDK, 분석 도구, 충돌 보고서 또는 광고 네트워크를 전혀 사용하지 않습니다.",
+            "원격 호스팅 코드를 로드하거나 실행하지 않습니다.",
+            "사용자 데이터를 제3자에게 판매, 대여, 공유 또는 공개하지 않습니다."
+          ]
+        },
+        s6: {
+          title: "6. 데이터 보유 및 삭제",
+          p1: "외부 서버에 저장되는 데이터가 없으므로, 앱에서 '로그인 시 자동 실행'을 끄고 `/Applications/LangSwap.app`을 삭제한 뒤 터미널에서 `defaults delete com.studionovaworks.LangSwap`을 실행하고 시스템 설정 > 개인정보 보호 및 보안 > 입력 모니터링에서 제거하면 모든 로컬 데이터가 영구 삭제됩니다."
+        },
+        s7: {
+          title: "7. 개인정보 처리방침 변경",
+          p1: "앱 기능이나 macOS 요구 사항 변경에 따라 본 방침이 업데이트될 수 있으며, 변경 사항은 상단의 '최종 업데이트' 날짜로 안내됩니다."
+        },
+        s8: {
+          title: "8. 개발자 정보 및 관련 링크",
+          p1: "본 앱에 대한 일반 정보와 업데이트는 아래 페이지를 참고하세요.",
+          devLabel: "개발자:",
+          infoLabel: "정보 페이지:",
+          note: "참고: 본 앱은 독립적으로 개발되어 '있는 그대로' 제공되는 무료 개인 도구이며, 전담 기술 지원이나 개별 문의 대응은 원칙적으로 제공되지 않습니다."
+        }
+      },
+
+      pt: {
+        dir: "ltr",
+        langLabel: "Idioma",
+        docTitle: "Política de Privacidade — LangSwap",
+        h1: "Política de Privacidade — LangSwap",
+        lastUpdatedLabel: "Última atualização:",
+        lastUpdatedValue: "21 de novembro de 2026",
+        developerLabel: "Desenvolvedor:",
+        developerValue: "Studio Nova Works",
+        intro: 'A Studio Nova Works ("nós") respeita sua privacidade e protege seus dados ao usar o aplicativo para macOS "LangSwap for Mac US Keyboard" ("App"). Esta Política explica como o App lida com informações.',
+        s1: {
+          title: "1. Nenhuma coleta de dados pessoais",
+          p1: "O App não coleta, grava, armazena ou transmite dados pessoais (nome, e-mail, credenciais ou dados de pagamento), textos digitados, histórico de teclas, área de transferência, tela ou uso de aplicativos.",
+          p2: "O App não exige cadastro nem login."
+        },
+        s2: {
+          title: "2. Configurações armazenadas localmente no Mac",
+          p1: "Para lembrar suas preferências entre sessões, o App salva localmente no Mac via `UserDefaults` do macOS (`com.studionovaworks.LangSwap`) apenas:",
+          items: [
+            "Estado ativo ou pausado (`LangSwap.isEnabled`)",
+            "IDs das fontes de entrada atribuídas ao Command esquerdo e direito (`LangSwap.leftCommandSourceID`, `LangSwap.rightCommandSourceID`) e predefinições (`LangSwap.presets`)",
+            "Tempo máximo de toque único e aviso na tela (`LangSwap.tapTimeoutMs`, `LangSwap.showHUDNotification`)",
+            "Início em segundo plano, tema, idioma da interface e estado inicial (`LangSwap.launchInBackground`, `LangSwap.appTheme`, `LangSwap.appLanguage`, `LangSwap.hasInitializedDefaults`)"
+          ],
+          p2: "Se você ativar «Abrir ao iniciar sessão», o macOS registra o item localmente via `SMAppService` da Apple. Todas as configurações ficam apenas no seu Mac e nunca são enviadas aos nossos servidores ou a terceiros."
+        },
+        s3: {
+          title: "3. Processamento no dispositivo e zero atividade automática de rede",
+          p1: "Para alternar idiomas ao tocar brevemente em Command esquerda ou direita, o App analisa temporariamente em memória apenas modificadores e ações que cancelam atalhos como `⌘+C` ou `⌘+Clique`, sem gravar caracteres ou senhas em disco.",
+          p2: "A troca usa localmente a API offline Carbon Text Input Source (`TISSelectInputSource`) da Apple no seu Mac.",
+          p3: "O App opera totalmente offline e não faz solicitações automáticas em segundo plano. Seu navegador só abre um link externo quando você clica voluntariamente em um link externo opcional no App (como o botão de apoio no Ko-fi ou o link da Política de Privacidade)."
+        },
+        s4: {
+          title: "4. Permissões do sistema macOS (Princípio do privilégio mínimo)",
+          p1: "O App segue o princípio do privilégio mínimo e solicita apenas a permissão essencial:",
+          items: [
+            { code: "Monitoramento de Entrada (Input Monitoring)", codes: ["kTCCServiceListenEvent", "CGEventTapOptions.listenOnly"], desc: "Usado apenas em modo somente leitura para detectar toques individuais em Command esquerda/direita em qualquer app, sem alterar nem bloquear suas teclas." },
+            { label: "Permissões não solicitadas", desc: "O App não solicita controle de Acessibilidade (`kTCCServiceAccessibility`), Acesso Total ao Disco, Gravação de Tela, Câmera, Microfone ou Contatos, respeitando a proteção Secure Input do macOS (campos de senha)." }
+          ]
+        },
+        s5: {
+          title: "5. Serviços de terceiros, análises e publicidade",
+          items: [
+            "O App não usa SDKs de terceiros, ferramentas de análise, relatórios de falha ou redes de anúncios.",
+            "O App não carrega nem executa código hospedado remotamente.",
+            "Nunca vendemos, alugamos, compartilhamos ou divulgamos dados de usuários a terceiros."
+          ]
+        },
+        s6: {
+          title: "6. Retenção e exclusão de dados",
+          p1: "Como nenhum dado fica em servidores externos, basta desativar «Abrir ao iniciar sessão», excluir `/Applications/LangSwap.app`, executar `defaults delete com.studionovaworks.LangSwap` no Terminal e remover o LangSwap em Ajustes do Sistema > Privacidade e Segurança > Monitoramento de Entrada."
+        },
+        s7: {
+          title: "7. Alterações nesta Política de Privacidade",
+          p1: "Podemos atualizar esta Política periodicamente para acompanhar mudanças no App ou nos requisitos do macOS. As atualizações serão refletidas na data «Última atualização» no topo da página."
+        },
+        s8: {
+          title: "8. Informações do desenvolvedor e links relacionados",
+          p1: "Para informações gerais e novidades sobre este App, visite:",
+          devLabel: "Desenvolvedor:",
+          infoLabel: "Página de informações:",
+          note: "Nota: Este App é uma ferramenta pessoal gratuita desenvolvida de forma independente e fornecida «no estado em que se encontra». Suporte técnico dedicado ou atendimento individual geralmente não são fornecidos."
+        }
+      },
+
+      ru: {
+        dir: "ltr",
+        langLabel: "Язык",
+        docTitle: "Политика конфиденциальности — LangSwap",
+        h1: "Политика конфиденциальности — LangSwap",
+        lastUpdatedLabel: "Последнее обновление:",
+        lastUpdatedValue: "21 ноября 2026 г.",
+        developerLabel: "Разработчик:",
+        developerValue: "Studio Nova Works",
+        intro: 'Studio Nova Works («мы») уважает вашу конфиденциальность и защищает ваши данные при использовании приложения macOS «LangSwap for Mac US Keyboard» («Приложение»). Настоящая Политика объясняет, как Приложение обращается с информацией.',
+        s1: {
+          title: "1. Отсутствие сбора персональных данных",
+          p1: "Приложение не собирает, не записывает, не хранит и не передаёт персональные данные (имя, email, учётные данные или платёжную информацию), вводимый текст, журналы нажатий клавиш, содержимое буфера обмена, экран или историю использования программ.",
+          p2: "Приложение не требует регистрации или входа в аккаунт."
+        },
+        s2: {
+          title: "2. Локальные настройки на вашем Mac",
+          p1: "Для сохранения параметров между сеансами Приложение хранит локально в macOS `UserDefaults` (домен `com.studionovaworks.LangSwap`) только следующие настройки:",
+          items: [
+            "Состояние переключения: активно или приостановлено (`LangSwap.isEnabled`)",
+            "Назначенные источники ввода для левой и правой клавиши Command (`LangSwap.leftCommandSourceID`, `LangSwap.rightCommandSourceID`) и сохранённые пары языков (`LangSwap.presets`)",
+            "Максимальное время одиночного нажатия и отображение экранного уведомления (`LangSwap.tapTimeoutMs`, `LangSwap.showHUDNotification`)",
+            "Запуск в фоне, тема оформления, язык интерфейса и флаг начальной настройки (`LangSwap.launchInBackground`, `LangSwap.appTheme`, `LangSwap.appLanguage`, `LangSwap.hasInitializedDefaults`)"
+          ],
+          p2: "Только если вы сами включите «Запускать при входе», macOS локально зарегистрирует объект входа через `SMAppService` Apple. Все данные остаются на вашем устройстве и никогда не передаются на серверы Studio Nova Works или третьим лицам."
+        },
+        s3: {
+          title: "3. Обработка на устройстве и отсутствие фоновых сетевых запросов",
+          p1: "Для переключения языка при одиночном нажатии левой или правой Command Приложение кратковременно оценивает в оперативной памяти состояние модификаторов и сигналы отмены сочетаний (`⌘+C`, `⌘+Клик` и др.), не записывая символы или пароли на диск.",
+          p2: "Переключение раскладки выполняется локально офлайн через Carbon Text Input Source API (`TISSelectInputSource`) в macOS.",
+          p3: "Приложение работает полностью автономно без автоматических сетевых запросов. Браузер открывает внешнюю страницу только при осознанном нажатии на необязательную внешнюю ссылку в Приложении (например, кнопку поддержки Ko-fi или ссылку на Политику конфиденциальности)."
+        },
+        s4: {
+          title: "4. Системные разрешения macOS (принцип минимальных привилегий)",
+          p1: "Приложение следует принципу минимальных привилегий и запрашивает только минимально необходимое разрешение:",
+          items: [
+            { code: "Мониторинг ввода (Input Monitoring)", codes: ["kTCCServiceListenEvent", "CGEventTapOptions.listenOnly"], desc: "Используется только в режиме чтения для распознавания одиночного нажатия левой/правой клавиши Command во всех приложениях без изменения или блокировки ввода." },
+            { label: "Незапрашиваемые разрешения", desc: "Приложение не запрашивает управление Универсального доступа (`kTCCServiceAccessibility`), полный доступ к диску, запись экрана, камеру, микрофон или контакты и автоматически соблюдает защиту Secure Input в macOS (поля паролей)." }
+          ]
+        },
+        s5: {
+          title: "5. Сторонние сервисы, аналитика и реклама",
+          items: [
+            "Приложение не содержит сторонних SDK, средств аналитики, отчётов о сбоях или рекламных сетей.",
+            "Приложение не загружает и не выполняет код с удалённых серверов.",
+            "Мы никогда не продаём, не передаём и не раскрываем данные пользователей третьим лицам."
+          ]
+        },
+        s6: {
+          title: "6. Хранение и удаление данных",
+          p1: "Поскольку на внешних серверах нет никаких данных, вы можете полностью удалить всё с Mac, отключив «Запускать при входе», удалив `/Applications/LangSwap.app`, выполнив `defaults delete com.studionovaworks.LangSwap` в Терминале и убрав LangSwap в разделе Системные настройки > Конфиденциальность и безопасность > Мониторинг ввода."
+        },
+        s7: {
+          title: "7. Изменения в Политике конфиденциальности",
+          p1: "Мы можем время от времени обновлять данную Политику в соответствии с развитием Приложения или требованиями macOS. Актуальность отражается датой «Последнее обновление» вверху страницы."
+        },
+        s8: {
+          title: "8. Сведения о разработчике и ссылки",
+          p1: "Общую информацию и новости о Приложении можно найти здесь:",
+          devLabel: "Разработчик:",
+          infoLabel: "Информационная страница:",
+          note: "Примечание: Приложение является бесплатным независимым личным инструментом и предоставляется «как есть». Индивидуальная техническая поддержка и ответы на личные обращения, как правило, не предоставляются."
+        }
+      },
+
+      th: {
+        dir: "ltr",
+        langLabel: "ภาษา",
+        docTitle: "นโยบายความเป็นส่วนตัว — LangSwap",
+        h1: "นโยบายความเป็นส่วนตัว — LangSwap",
+        lastUpdatedLabel: "อัปเดตล่าสุด:",
+        lastUpdatedValue: "21 พฤศจิกายน 2026",
+        developerLabel: "ผู้พัฒนา:",
+        developerValue: "Studio Nova Works",
+        intro: 'Studio Nova Works ("เรา") เคารพความเป็นส่วนตัวของคุณและมุ่งมั่นปกป้องข้อมูลเมื่อใช้แอปพลิเคชัน macOS "LangSwap for Mac US Keyboard" ("แอป") นโยบายนี้อธิบายการจัดการข้อมูลของแอป',
+        s1: {
+          title: "1. ไม่มีการเก็บรวบรวมข้อมูลส่วนบุคคล",
+          p1: "แอปไม่เก็บรวบรวม บันทึก จัดเก็บ หรือส่งข้อมูลส่วนบุคคลใดๆ (เช่น ชื่อ อีเมล ข้อมูลบัญชี หรือข้อมูลการชำระเงิน) ข้อความที่พิมพ์ บันทึกการกดแป้นพิมพ์ คลิปบอร์ด ภาพหน้าจอ หรือประวัติการใช้งานแอป",
+          p2: "แอปไม่จำเป็นต้องลงทะเบียนหรือเข้าสู่ระบบบัญชีผู้ใช้"
+        },
+        s2: {
+          title: "2. การตั้งค่าที่บันทึกไว้ในเครื่อง Mac ของคุณ",
+          p1: "เพื่อจดจำค่าที่เลือกไว้ แอปจะจัดเก็บเฉพาะการตั้งค่าต่อไปนี้ในเครื่องผ่าน `UserDefaults` ของ macOS (`com.studionovaworks.LangSwap`):",
+          items: [
+            "สถานะเปิดใช้งานหรือหยุดชั่วคราว (`LangSwap.isEnabled`)",
+            "รหัสแหล่งป้อนข้อมูลของปุ่ม Command ซ้ายและขวา (`LangSwap.leftCommandSourceID`, `LangSwap.rightCommandSourceID`) และพรีเซ็ตที่บันทึก (`LangSwap.presets`)",
+            "ระยะเวลากดครั้งเดียวสูงสุดและการแจ้งเตือนบนหน้าจอ (`LangSwap.tapTimeoutMs`, `LangSwap.showHUDNotification`)",
+            "การทำงานเบื้องหลัง ธีมสี ภาษาแอป และสถานะการตั้งค่าเริ่มต้น (`LangSwap.launchInBackground`, `LangSwap.appTheme`, `LangSwap.appLanguage`, `LangSwap.hasInitializedDefaults`)"
+          ],
+          p2: "หากคุณเปิดใช้งาน 'เปิดอัตโนมัติเมื่อเข้าสู่ระบบ' ระบบ macOS จะบันทึกรายการเข้าสู่ระบบในเครื่องผ่าน `SMAppService` ของ Apple ข้อมูลทั้งหมดจะอยู่บนเครื่องของคุณเท่านั้นและไม่ส่งไปยังเซิร์ฟเวอร์ภายนอก"
+        },
+        s3: {
+          title: "3. การประมวลผลบนอุปกรณ์และไม่เชื่อมต่อเครือข่ายอัตโนมัติ",
+          p1: "เมื่อแตะ Command ซ้ายหรือขวา แอปจะตรวจสอบสถานะปุ่มปรับแต่งและเหตุการณ์ในหน่วยความจำชั่วคราวเพื่อป้องกันการทำงานซ้ำซ้อนกับคีย์ลัดอย่าง `⌘+C` หรือ `⌘+คลิก` โดยไม่บันทึกตัวอักษรหรือรหัสผ่านลงดิสก์",
+          p2: "การสลับภาษาใช้ Carbon Text Input Source API (`TISSelectInputSource`) ในเครื่องแบบออฟไลน์",
+          p3: "แอปทำงานแบบออฟไลน์ทั้งหมดโดยไม่มีคำขอเครือข่ายอัตโนมัติ เบราว์เซอร์จะเปิดลิงก์ภายนอกเฉพาะเมื่อคุณกดลิงก์ภายนอกที่เลือกได้ภายในแอปด้วยตนเอง (เช่น ปุ่มสนับสนุน Ko-fi หรือลิงก์นโยบายความเป็นส่วนตัว)"
+        },
+        s4: {
+          title: "4. สิทธิ์ของระบบ macOS (หลักการให้สิทธิ์น้อยที่สุด)",
+          p1: "แอปยึดหลักการให้สิทธิ์น้อยที่สุดและขอเฉพาะสิทธิ์ที่จำเป็นเท่านั้น:",
+          items: [
+            { code: "การตรวจสอบอินพุต (Input Monitoring)", codes: ["kTCCServiceListenEvent", "CGEventTapOptions.listenOnly"], desc: "ใช้เพื่ออ่านและตรวจจับการแตะปุ่ม Command ซ้าย/ขวาในแอปอื่นเท่านั้น โดยไม่แก้ไขหรือปิดกั้นการพิมพ์ของคุณ" },
+            { label: "สิทธิ์ที่ไม่ได้ร้องขอ", desc: "แอปไม่ขอสิทธิ์การช่วยการเข้าถึง (`kTCCServiceAccessibility`), การเข้าถึงดิสก์ทั้งหมด, การบันทึกหน้าจอ, กล้อง, ไมโครโฟน หรือรายชื่อ และเคารพการป้อนข้อมูลปลอดภัยของ macOS (เช่น ช่องรหัสผ่าน) โดยอัตโนมัติ" }
+          ]
+        },
+        s5: {
+          title: "5. บริการบุคคลที่สาม การวิเคราะห์ และโฆษณา",
+          items: [
+            "แอปไม่มี SDK บุคคลที่สาม เครื่องมือวิเคราะห์ ระบบรายงานข้อผิดพลาด หรือเครือข่ายโฆษณา",
+            "แอปไม่โหลดหรือรันโค้ดจากเซิร์ฟเวอร์ภายนอก",
+            "เราไม่ขาย ให้เช่า แบ่งปัน หรือเปิดเผยข้อมูลผู้ใช้แก่บุคคลที่สาม"
+          ]
+        },
+        s6: {
+          title: "6. การเก็บรักษาและการลบข้อมูล",
+          p1: "เนื่องจากไม่มีข้อมูลบนเซิร์ฟเวอร์ภายนอก คุณสามารถลบข้อมูลทั้งหมดได้ตลอดเวลาโดยปิดการเปิดเมื่อเข้าสู่ระบบ ลบ `/Applications/LangSwap.app` รัน `defaults delete com.studionovaworks.LangSwap` ใน Terminal และลบสิทธิ์ในการตั้งค่าระบบ > ความเป็นส่วนตัวและความปลอดภัย > การตรวจสอบอินพุต"
+        },
+        s7: {
+          title: "7. การเปลี่ยนแปลงนโยบายความเป็นส่วนตัวนี้",
+          p1: "เราอาจอัปเดตนโยบายนี้เป็นครั้งคราวเพื่อให้สอดคล้องกับฟีเจอร์หรือข้อกำหนด macOS โดยดูได้จากวันที่ 'อัปเดตล่าสุด' ด้านบน"
+        },
+        s8: {
+          title: "8. ข้อมูลผู้พัฒนาและลิงก์ที่เกี่ยวข้อง",
+          p1: "สำหรับข้อมูลทั่วไปและข่าวสารการอัปเดต กรุณาเยี่ยมชม:",
+          devLabel: "ผู้พัฒนา:",
+          infoLabel: "หน้าข้อมูล:",
+          note: "หมายเหตุ: แอปนี้เป็นเครื่องมือส่วนตัวที่พัฒนาอย่างอิสระและให้บริการฟรีตามสภาพ โดยทั่วไปไม่มีบริการสนับสนุนทางเทคนิคเฉพาะหรือการตอบคำถามรายบุคคล"
+        }
+      },
+
+      tr: {
+        dir: "ltr",
+        langLabel: "Dil",
+        docTitle: "Gizlilik Politikası — LangSwap",
+        h1: "Gizlilik Politikası — LangSwap",
+        lastUpdatedLabel: "Son Güncelleme:",
+        lastUpdatedValue: "21 Kasım 2026",
+        developerLabel: "Geliştirici:",
+        developerValue: "Studio Nova Works",
+        intro: 'Studio Nova Works ("biz"), "LangSwap for Mac US Keyboard" ("Uygulama") macOS uygulamasını kullanırken gizliliğinize saygı duyar ve verilerinizi korumayı taahhüt eder. Bu Politika bilgilerin nasıl işlendiğini açıklar.',
+        s1: {
+          title: "1. Kişisel Veri Toplanmaması",
+          p1: "Uygulama kişisel kimlik bilgilerini (ad, e-posta, hesap veya ödeme bilgileri), yazılan metni, tuş kayıtlarını, pano içeriğini, ekran görüntüsünü veya uygulama kullanım geçmişini toplamaz, kaydetmez veya iletmez.",
+          p2: "Uygulama kullanıcı kaydı veya hesap girişi gerektirmez."
+        },
+        s2: {
+          title: "2. Mac'inizde Yerel Olarak Saklanan Ayarlar",
+          p1: "Tercihlerinizi hatırlamak için Uygulama yalnızca şu ayarları macOS `UserDefaults` (`com.studionovaworks.LangSwap`) içinde yerel olarak saklar:",
+          items: [
+            "Etkin/duraklatılmış durum (`LangSwap.isEnabled`)",
+            "Sol ve Sağ Command giriş kaynağı kimlikleri (`LangSwap.leftCommandSourceID`, `LangSwap.rightCommandSourceID`) ve kayıtlı ön ayarlar (`LangSwap.presets`)",
+            "Tek dokunma süresi ve ekran bildirimi tercihi (`LangSwap.tapTimeoutMs`, `LangSwap.showHUDNotification`)",
+            "Arka planda başlatma, görünüm modu, arayüz dili ve ilk kurulum durumu (`LangSwap.launchInBackground`, `LangSwap.appTheme`, `LangSwap.appLanguage`, `LangSwap.hasInitializedDefaults`)"
+          ],
+          p2: "Yalnızca 'Oturum Açılışında Başlat'ı açarsanız macOS giriş öğesini Apple `SMAppService` üzerinden yerel olarak kaydeder. Tüm ayarlar cihazınızda kalır ve Studio Nova Works sunucularına veya üçüncü taraflara gönderilmez."
+        },
+        s3: {
+          title: "3. Cihaz İçi İşleme ve Sıfır Otomatik Ağ Etkinliği",
+          p1: "Sol veya Sağ Command dokunuşuyla dil değiştirmek için Uygulama yalnızca `⌘+C` veya `⌘+Tık` gibi kısayolları engellememek amacıyla bellekte geçici olarak tuş/fare durumunu kontrol eder; diske hiçbir metin veya parola yazılmaz.",
+          p2: "Giriş kaynağı geçişi Mac'inizde yerel Carbon Text Input Source API (`TISSelectInputSource`) üzerinden çevrimdışı gerçekleşir.",
+          p3: "Uygulama tamamen çevrimdışı çalışır ve arka planda otomatik ağ isteği göndermez. Tarayıcınız yalnızca Uygulama içindeki isteğe bağlı bir harici bağlantıya (ör. Ko-fi destek düğmesi veya Gizlilik Politikası bağlantısı) tıkladığınızda harici bir bağlantı açar."
+        },
+        s4: {
+          title: "4. macOS Sistem İzinleri (En Az Yetki İlkesi)",
+          p1: "Uygulama en az yetki ilkesini izler ve yalnızca gerekli asgari izni ister:",
+          items: [
+            { code: "Giriş İzleme (Input Monitoring)", codes: ["kTCCServiceListenEvent", "CGEventTapOptions.listenOnly"], desc: "Diğer uygulamalar etkinken yalnızca Sol/Sağ Command dokunuşlarını salt okunur biçimde algılamak için kullanılır; klavye girişini değiştirmez veya engellemez." },
+            { label: "İstenmeyen İzinler", desc: "Uygulama Erişilebilirlik (`kTCCServiceAccessibility`), Tam Disk Erişimi, Ekran Kaydı, Kamera, Mikrofon veya Kişiler istemez ve macOS Güvenli Giriş (parola alanları) korumasını otomatik olarak gözetir." }
+          ]
+        },
+        s5: {
+          title: "5. Üçüncü Taraf Hizmetler, Analiz ve Reklam",
+          items: [
+            "Uygulama üçüncü taraf SDK, analiz aracı, kilitlenme raporu veya reklam ağı içermez.",
+            "Uygulama uzaktan barındırılan kod yüklemez veya çalıştırmaz.",
+            "Kullanıcı verilerini üçüncü taraflara asla satmaz, kiralamaz, paylaşmaz veya açıklamayız."
+          ]
+        },
+        s6: {
+          title: "6. Veri Saklama ve Silme",
+          p1: "Harici sunucuda veri tutulmadığından, 'Oturum Açılışında Başlat'ı kapatıp `/Applications/LangSwap.app` dosyasını silerek, Terminal'de `defaults delete com.studionovaworks.LangSwap` çalıştırarak ve Sistem Ayarları > Gizlilik ve Güvenlik > Giriş İzleme'den kaldırarak tüm yerel verileri kalıcı biçimde silebilirsiniz."
+        },
+        s7: {
+          title: "7. Bu Gizlilik Politikasında Değişiklikler",
+          p1: "Uygulama özelliklerine veya macOS gereksinimlerine göre bu politikayı güncelleyebiliriz. Değişiklikler sayfanın üst kısmındaki 'Son Güncelleme' tarihiyle belirtilir."
+        },
+        s8: {
+          title: "8. Geliştirici Bilgileri ve İlgili Bağlantılar",
+          p1: "Genel bilgi ve güncellemeler için lütfen ziyaret edin:",
+          devLabel: "Geliştirici:",
+          infoLabel: "Bilgi Sayfası:",
+          note: "Not: Bu Uygulama bağımsız olarak geliştirilmiş ücretsiz bir kişisel araçtır ve «olduğu gibi» sunulmaktadır. Özel teknik destek veya bireysel sorulara yanıt genellikle sağlanmamaktadır."
+        }
+      },
+
+      uk: {
+        dir: "ltr",
+        langLabel: "Мова",
+        docTitle: "Політика конфіденційності — LangSwap",
+        h1: "Політика конфіденційності — LangSwap",
+        lastUpdatedLabel: "Останнє оновлення:",
+        lastUpdatedValue: "21 листопада 2026 р.",
+        developerLabel: "Розробник:",
+        developerValue: "Studio Nova Works",
+        intro: 'Studio Nova Works («ми») поважає вашу конфіденційність і захищає ваші дані під час використання програми macOS «LangSwap for Mac US Keyboard» («Програма»). Ця Політика пояснює, як Програма працює з даними.',
+        s1: {
+          title: "1. Жодного збору персональних даних",
+          p1: "Програма не збирає, не записує, не зберігає та не передає персональні дані (ім’я, email, облікові чи платіжні реквізити), введений текст, журнали натискань, буфер обміну, вміст екрана або історію користування програмами.",
+          p2: "Програма не потребує реєстрації чи входу в обліковий запис."
+        },
+        s2: {
+          title: "2. Локальні налаштування на вашому Mac",
+          p1: "Для збереження параметрів між сеансами Програма локально зберігає в macOS `UserDefaults` (`com.studionovaworks.LangSwap`) лише такі налаштування:",
+          items: [
+            "Активний або призупинений стан (`LangSwap.isEnabled`)",
+            "Призначені джерела вводу для лівої та правої Command (`LangSwap.leftCommandSourceID`, `LangSwap.rightCommandSourceID`) і збережені пресети (`LangSwap.presets`)",
+            "Макс. час одиночного натискання й показ сповіщення (`LangSwap.tapTimeoutMs`, `LangSwap.showHUDNotification`)",
+            "Запуск у фоні, тема оформлення, мова інтерфейсу та прапорець початкового налаштування (`LangSwap.launchInBackground`, `LangSwap.appTheme`, `LangSwap.appLanguage`, `LangSwap.hasInitializedDefaults`)"
+          ],
+          p2: "Лише якщо ви явно увімкнете «Запускати під час входу», macOS локально зареєструє елемент входу через `SMAppService` Apple. Усі дані залишаються на вашому Mac і ніколи не передаються на наші сервери чи третім сторонам."
+        },
+        s3: {
+          title: "3. Локальна обробка та відсутність автоматичних мережевих запитів",
+          p1: "Для перемикання мови при короткому натисканні Command ліворуч чи праворуч Програма тимчасово аналізує в оперативній пам’яті лише прапорці модифікаторів та сигнали скасування сполучень (`⌘+C`, `⌘+Клік`), без запису символів чи паролів на диск.",
+          p2: "Перемикання розкладки виконується локально офлайн через macOS Carbon Text Input Source API (`TISSelectInputSource`).",
+          p3: "Програма працює повністю офлайн і не надсилає автоматичних мережевих запитів. Браузер відкриває зовнішнє посилання лише після свідомого натискання необов’язкового зовнішнього посилання в Програмі (наприклад, кнопки підтримки Ko-fi або посилання на Політику конфіденційності)."
+        },
+        s4: {
+          title: "4. Системні дозволи macOS (принцип найменших привілеїв)",
+          p1: "Програма дотримується принципу мінімальних прав і запитує лише необхідний дозвіл:",
+          items: [
+            { code: "Моніторинг вводу (Input Monitoring)", codes: ["kTCCServiceListenEvent", "CGEventTapOptions.listenOnly"], desc: "Використовується лише для читання з метою розпізнавання одиночних натискань лівої/правої Command в інших програмах без зміни або блокування клавіатури." },
+            { label: "Дозволи, що не запитуються", desc: "Програма не запитує керування Доступністю (`kTCCServiceAccessibility`), Повний доступ до диска, Запис екрана, Камеру, Мікрофон чи Контакти й поважає захищений ввід macOS (поля паролів)." }
+          ]
+        },
+        s5: {
+          title: "5. Сторонні сервіси, аналітика та реклама",
+          items: [
+            "Програма не містить сторонніх SDK, інструментів аналітики, звітів про збої чи рекламних мереж.",
+            "Програма не завантажує й не виконує віддалений код.",
+            "Ми ніколи не продаємо, не передаємо та не розкриваємо дані користувачів третім особам."
+          ]
+        },
+        s6: {
+          title: "6. Зберігання та видалення даних",
+          p1: "Оскільки на зовнішніх серверах даних немає, ви можете остаточно видалити всі локальні налаштування, вимкнувши автозапуск, видаливши `/Applications/LangSwap.app`, виконавши `defaults delete com.studionovaworks.LangSwap` у Терміналі та прибравши LangSwap у Системних параметрах > Приватність і безпека > Моніторинг вводу."
+        },
+        s7: {
+          title: "7. Зміни до цієї Політики конфіденційності",
+          p1: "Ми можемо оновлювати цю Політику відповідно до змін функцій Програми або вимог macOS. Дата оновлення зазначається вгорі сторінки."
+        },
+        s8: {
+          title: "8. Відомості про розробника та посилання",
+          p1: "Загальну інформацію та оновлення можна знайти на сторінці:",
+          devLabel: "Розробник:",
+          infoLabel: "Інформаційна сторінка:",
+          note: "Примітка: Ця Програма є безкоштовним незалежним особистим інструментом і надається «як є». Спеціальна технічна підтримка або відповіді на індивідуальні запити зазвичай не надаються."
+        }
+      },
+
+      vi: {
+        dir: "ltr",
+        langLabel: "Ngôn ngữ",
+        docTitle: "Chính sách Quyền riêng tư — LangSwap",
+        h1: "Chính sách Quyền riêng tư — LangSwap",
+        lastUpdatedLabel: "Cập nhật lần cuối:",
+        lastUpdatedValue: "21 tháng 11, 2026",
+        developerLabel: "Nhà phát triển:",
+        developerValue: "Studio Nova Works",
+        intro: 'Studio Nova Works ("chúng tôi") tôn trọng quyền riêng tư của bạn và cam kết bảo vệ dữ liệu khi bạn sử dụng ứng dụng macOS "LangSwap for Mac US Keyboard" ("Ứng dụng"). Chính sách này giải thích cách Ứng dụng xử lý thông tin.',
+        s1: {
+          title: "1. Không thu thập dữ liệu cá nhân",
+          p1: "Ứng dụng không thu thập, ghi lại, lưu trữ hoặc truyền bất kỳ thông tin định danh cá nhân nào (như tên, email, thông tin tài khoản hoặc thanh toán), văn bản đã gõ, nhật ký phím, nội dung bảng tạm, màn hình hoặc lịch sử dùng ứng dụng.",
+          p2: "Ứng dụng không yêu cầu đăng ký hay đăng nhập tài khoản."
+        },
+        s2: {
+          title: "2. Cài đặt được lưu cục bộ trên máy Mac",
+          p1: "Để ghi nhớ tùy chọn của bạn giữa các phiên làm việc, Ứng dụng chỉ lưu các cài đặt sau cục bộ qua `UserDefaults` của macOS (miền `com.studionovaworks.LangSwap`):",
+          items: [
+            "Trạng thái đang chạy hoặc tạm dừng (`LangSwap.isEnabled`)",
+            "ID nguồn nhập gán cho Command Trái và Phải (`LangSwap.leftCommandSourceID`, `LangSwap.rightCommandSourceID`) cùng các mẫu đã lưu (`LangSwap.presets`)",
+            "Thời gian nhấn đơn tối đa và tùy chọn thông báo màn hình (`LangSwap.tapTimeoutMs`, `LangSwap.showHUDNotification`)",
+            "Chạy ngầm khi khởi động, giao diện, ngôn ngữ hiển thị và cờ thiết lập ban đầu (`LangSwap.launchInBackground`, `LangSwap.appTheme`, `LangSwap.appLanguage`, `LangSwap.hasInitializedDefaults`)"
+          ],
+          p2: "Chỉ khi bạn bật 'Mở khi đăng nhập', macOS mới đăng ký mục khởi động cục bộ thông qua `SMAppService` của Apple. Mọi thiết lập chỉ nằm trên máy của bạn và không bao giờ đồng bộ lên máy chủ bên ngoài."
+        },
+        s3: {
+          title: "3. Xử lý trên thiết bị và không kết nối mạng tự động",
+          p1: "Để chuyển ngôn ngữ khi nhấn đơn Command Trái hoặc Phải, Ứng dụng chỉ kiểm tra tạm thời trong bộ nhớ trạng thái phím bổ trợ và thao tác để hủy khi nhấn phím tắt như `⌘+C` hoặc `⌘+Click`, hoàn toàn không ghi ký tự hay mật khẩu vào ổ đĩa.",
+          p2: "Việc chuyển bộ gõ thực hiện cục bộ ngoại tuyến qua Carbon Text Input Source API (`TISSelectInputSource`) của macOS.",
+          p3: "Ứng dụng hoạt động hoàn toàn ngoại tuyến và không tự động gửi yêu cầu mạng chạy ngầm. Trình duyệt chỉ mở liên kết ngoài khi bạn chủ động nhấn vào liên kết ngoài tùy chọn trong Ứng dụng (chẳng hạn nút ủng hộ Ko-fi hoặc liên kết Chính sách quyền riêng tư)."
+        },
+        s4: {
+          title: "4. Quyền hệ thống macOS (Nguyên tắc đặc quyền tối thiểu)",
+          p1: "Ứng dụng tuân thủ nguyên tắc đặc quyền tối thiểu và chỉ yêu cầu một quyền cần thiết:",
+          items: [
+            { code: "Giám sát đầu vào (Input Monitoring)", codes: ["kTCCServiceListenEvent", "CGEventTapOptions.listenOnly"], desc: "Chỉ dùng ở chế độ chỉ đọc để phát hiện nhấn đơn phím Command Trái/Phải trên mọi ứng dụng mà không chỉnh sửa hay chặn thao tác gõ phím." },
+            { label: "Quyền không yêu cầu", desc: "Ứng dụng không yêu cầu quyền Trợ năng (`kTCCServiceAccessibility`), Truy cập Toàn bộ Ổ đĩa, Ghi màn hình, Camera, Micrô hoặc Danh bạ, đồng thời tôn trọng bảo vệ Secure Input của macOS (trường mật khẩu)." }
+          ]
+        },
+        s5: {
+          title: "5. Dịch vụ bên thứ ba, phân tích và quảng cáo",
+          items: [
+            "Ứng dụng không tích hợp bất kỳ SDK bên thứ ba, công cụ phân tích, báo cáo lỗi hay mạng quảng cáo nào.",
+            "Ứng dụng không tải hoặc chạy mã từ máy chủ từ xa.",
+            "Chúng tôi không bao giờ bán, cho thuê, chia sẻ hay tiết lộ dữ liệu người dùng cho bên thứ ba."
+          ]
+        },
+        s6: {
+          title: "6. Lưu giữ và xóa dữ liệu",
+          p1: "Vì không có dữ liệu nào trên máy chủ ngoài, bạn có thể xóa vĩnh viễn mọi thiết lập cục bộ bằng cách tắt mở khi đăng nhập, xóa `/Applications/LangSwap.app`, chạy `defaults delete com.studionovaworks.LangSwap` trong Terminal và gỡ khỏi Cài đặt Hệ thống > Quyền riêng tư & Bảo mật > Giám sát đầu vào."
+        },
+        s7: {
+          title: "7. Thay đổi đối với Chính sách này",
+          p1: "Chúng tôi có thể cập nhật Chính sách này khi tính năng Ứng dụng hoặc yêu cầu của macOS thay đổi. Ngày cập nhật luôn được hiển thị ở đầu trang."
+        },
+        s8: {
+          title: "8. Thông tin nhà phát triển & Liên kết",
+          p1: "Để biết thông tin chung và bản cập nhật về Ứng dụng, vui lòng truy cập:",
+          devLabel: "Nhà phát triển:",
+          infoLabel: "Trang thông tin:",
+          note: 'Lưu ý: Ứng dụng là công cụ cá nhân miễn phí được phát triển độc lập và cung cấp "nguyên trạng". Hỗ trợ kỹ thuật chuyên biệt hoặc phản hồi yêu cầu riêng lẻ thường không được cung cấp.'
+        }
+      },
+
+      zh_CN: {
+        dir: "ltr",
+        langLabel: "语言",
+        docTitle: "隐私政策 — LangSwap",
+        h1: "隐私政策 — LangSwap",
+        lastUpdatedLabel: "最后更新日期:",
+        lastUpdatedValue: "2026年11月21日",
+        developerLabel: "开发者:",
+        developerValue: "Studio Nova Works",
+        intro: 'Studio Nova Works（以下简称“我们”）重视您的隐私，并致力于在使用 macOS 应用程序“LangSwap for Mac US Keyboard”（以下简称“本应用”）期间保护您的信息。本隐私政策说明本应用如何处理相关信息与系统权限。',
+        s1: {
+          title: "1. 不收集个人数据",
+          p1: "本应用不收集、记录、存储或传输任何可识别个人身份的信息（如姓名、电子邮箱、账号凭据或付款信息），也不收集您输入的文本、按键日志、剪贴板内容、屏幕内容或应用使用记录。",
+          p2: "本应用无需注册或登录账号。"
+        },
+        s2: {
+          title: "2. 仅在本地 Mac 上保存的设置",
+          p1: "为保留您的偏好设置，本应用仅通过 macOS `UserDefaults`（域 `com.studionovaworks.LangSwap`）在您的本地设备上保存以下配置：",
+          items: [
+            "切换功能的运行/暂停状态（`LangSwap.isEnabled`）",
+            "左右 Command 键绑定的输入源 ID（`LangSwap.leftCommandSourceID`、`LangSwap.rightCommandSourceID`）及已保存预设（`LangSwap.presets`）",
+            "单击判定最大时长及屏幕提示开关（`LangSwap.tapTimeoutMs`、`LangSwap.showHUDNotification`）",
+            "后台启动、外观主题、界面语言及首次初始化标记（`LangSwap.launchInBackground`、`LangSwap.appTheme`、`LangSwap.appLanguage`、`LangSwap.hasInitializedDefaults`）"
+          ],
+          p2: "仅当您主动开启“登录 Mac 时自动启动”时，macOS 会通过 Apple 的 `SMAppService` 在本地注册登录项。所有设置均严格保留在您的 Mac 上，绝不会同步或上传至任何服务器或第三方。"
+        },
+        s3: {
+          title: "3. 本地处理且无自动联网行为",
+          p1: "为准确识别左右 Command 键的单击，本应用仅在易失性内存中瞬时判断修饰键状态以及用于取消快捷键误触的信号（`⌘+C` 或 `⌘+点击` 等），绝不会将您输入的字符或密码写入磁盘。",
+          p2: "输入法切换完全离线调用 macOS 本地的 Carbon Text Input Source API（`TISSelectInputSource`）。",
+          p3: "本应用完全离线运行，不会在后台发起任何自动网络请求。仅当您主动点击应用内的可选外部链接（例如 Ko-fi 支持按钮或隐私政策链接）时，浏览器才会打开外部页面。"
+        },
+        s4: {
+          title: "4. macOS 系统权限（最小权限原则）",
+          p1: "本应用严格遵循最小权限原则，仅申请运行所需的最低系统权限：",
+          items: [
+            { code: "输入监控 (Input Monitoring)", codes: ["kTCCServiceListenEvent", "CGEventTapOptions.listenOnly"], desc: "仅以只读方式检测其他应用前景运行时的左右 Command 单击事件，绝不修改或拦截您的键盘输入。" },
+            { label: "不申请的权限", desc: "本应用不申请“辅助功能”控制权限（`kTCCServiceAccessibility`）、完全磁盘访问、屏幕录制、摄像头、麦克风或通讯录权限，并自动尊重 macOS 安全输入保护（如密码输入框）。" }
+          ]
+        },
+        s5: {
+          title: "5. 第三方服务、分析与广告",
+          items: [
+            "本应用不包含任何第三方 SDK、数据分析工具、崩溃上报组件或广告网络。",
+            "本应用不会从远程服务器下载并执行代码。",
+            "我们绝不向第三方出售、出租、共享或披露用户数据。"
+          ]
+        },
+        s6: {
+          title: "6. 数据保留与删除",
+          p1: "由于外部服务器不保存任何数据，您随时可以通过关闭“登录自动启动”、删除 `/Applications/LangSwap.app`、在终端执行 `defaults delete com.studionovaworks.LangSwap` 并在“系统设置 > 隐私与安全性 > 输入监控”中移除 LangSwap 来彻底清除所有本地配置与权限。"
+        },
+        s7: {
+          title: "7. 隐私政策的变更",
+          p1: "随着功能更新或 macOS 要求变化，我们可能会更新本隐私政策。更新时将修改页面顶部的“最后更新日期”。"
+        },
+        s8: {
+          title: "8. 开发者信息与相关链接",
+          p1: "如需了解本应用的公开信息与更新动态，请访问：",
+          devLabel: "开发者:",
+          infoLabel: "信息主页:",
+          note: "注：本应用为独立开发的免费个人工具，按“现状”提供，原则上不提供专属技术支持或个别咨询回复。"
+        }
+      },
+
+      zh_TW: {
+        dir: "ltr",
+        langLabel: "語言",
+        docTitle: "隱私權政策 — LangSwap",
+        h1: "隱私權政策 — LangSwap",
+        lastUpdatedLabel: "最後更新日期:",
+        lastUpdatedValue: "2026年11月21日",
+        developerLabel: "開發者:",
+        developerValue: "Studio Nova Works",
+        intro: 'Studio Nova Works（以下簡稱「我們」）尊重您的隱私，並致力於在您使用 macOS 應用程式「LangSwap for Mac US Keyboard」（以下簡稱「本應用程式」）時保護您的資訊。本政策說明本應用程式如何處理資訊與權限。',
+        s1: {
+          title: "1. 不蒐集個人資料",
+          p1: "本應用程式不蒐集、記錄、儲存或傳輸任何可識別個人身分的資訊（如姓名、電子郵件、帳號憑證或付款資料），亦不蒐集輸入文字、按鍵日誌、剪貼簿內容、螢幕畫面或應用程式使用記錄。",
+          p2: "本應用程式無需註冊或登入帳號。"
+        },
+        s2: {
+          title: "2. 僅儲存於本機 Mac 的設定",
+          p1: "為保留您的偏好設定，本應用程式僅透過 macOS `UserDefaults`（網域 `com.studionovaworks.LangSwap`）在您的本機裝置儲存下列設定：",
+          items: [
+            "切換功能的執行／暫停狀態（`LangSwap.isEnabled`）",
+            "左右 Command 鍵指派的輸入來源 ID（`LangSwap.leftCommandSourceID`、`LangSwap.rightCommandSourceID`）及已儲存預設組合（`LangSwap.presets`）",
+            "單擊判定最長時限與螢幕提示顯示開關（`LangSwap.tapTimeoutMs`、`LangSwap.showHUDNotification`）",
+            "背景啟動、外觀模式、介面語言及首次設定完成標記（`LangSwap.launchInBackground`、`LangSwap.appTheme`、`LangSwap.appLanguage`、`LangSwap.hasInitializedDefaults`）"
+          ],
+          p2: "僅當您明確開啟「登入 Mac 時自動啟動」時，macOS 會透過 Apple `SMAppService` 於本機註冊登入項目。所有設定皆僅存於您的裝置中，絕不同步或傳送至任何外部伺服器或第三方。"
+        },
+        s3: {
+          title: "3. 本機處理且無自動網路活動",
+          p1: "為準確辨識左右 Command 鍵單擊，本應用程式僅在揮發性記憶體中即時判斷修飾鍵狀態與用於取消快捷鍵誤觸的訊號（例如 `⌘+C` 或 `⌘+點擊`），絕不將輸入字元或密碼寫入磁碟。",
+          p2: "切換輸入法完全於本機離線呼叫 macOS 的 Carbon Text Input Source API（`TISSelectInputSource`）。",
+          p3: "本應用程式完全離線運作，不會在背景發出任何自動網路請求。僅當您主動點擊應用程式內選用的外部連結（例如 Ko-fi 贊助按鈕或隱私權政策連結）時，瀏覽器才會開啟外部網頁。"
+        },
+        s4: {
+          title: "4. macOS 系統權限（最小權限原則）",
+          p1: "本應用程式遵循最小權限原則，僅要求跨 App 運作所需的最低權限：",
+          items: [
+            { code: "輸入監控 (Input Monitoring)", codes: ["kTCCServiceListenEvent", "CGEventTapOptions.listenOnly"], desc: "僅以唯讀模式偵測前景使用其他 App 時的左右 Command 鍵單擊事件，絕不修改或阻擋您的鍵盤輸入。" },
+            { label: "不要求的權限", desc: "本應用程式不要求「輔助使用」控制權限（`kTCCServiceAccessibility`）、完全磁碟存取權、螢幕錄製、相機、麥克風或聯絡人權限，並自動遵守 macOS 安全輸入保護（例如密碼欄位）。" }
+          ]
+        },
+        s5: {
+          title: "5. 第三方服務、分析與廣告",
+          items: [
+            "本應用程式不包含任何第三方 SDK、分析工具、當機回報元件或廣告聯播網。",
+            "本應用程式不會載入或執行遠端主機程式碼。",
+            "我們絕不向第三方出售、出租、分享或揭露使用者資料。"
+          ]
+        },
+        s6: {
+          title: "6. 資料保留與刪除",
+          p1: "因外部伺服器不儲存任何資料，您隨時可透過關閉「登入時自動啟動」、刪除 `/Applications/LangSwap.app`、於終端機執行 `defaults delete com.studionovaworks.LangSwap`，並於「系統設定 > 隱私權與安全性 > 輸入監控」移除 LangSwap 來徹底清除所有本機資料與權限。"
+        },
+        s7: {
+          title: "7. 隱私權政策之變更",
+          p1: "隨功能更新或 macOS 規範調整，我們可能會更新本政策，並以頁面頂端的「最後更新日期」註明。"
+        },
+        s8: {
+          title: "8. 開發者資訊與相關連結",
+          p1: "如需本應用程式的一般資訊與更新動態，請造訪：",
+          devLabel: "開發者:",
+          infoLabel: "資訊頁面:",
+          note: "註：本應用程式為獨立開發的免費個人工具，依「現況」提供，原則上不提供專屬技術支援或個別諮詢回覆。"
+        }
+      }
+    };
+
+    const htmlEl = document.documentElement;
+    const langSelect = document.getElementById("langSelect");
+    const langLabel = document.getElementById("langLabel");
+    const mainEl = document.getElementById("policyContent");
+
+    function appendFormattedText(parent, text) {
+      const parts = text.split(/(`[^`]+`)/g);
+      for (const part of parts) {
+        if (part.startsWith("`") && part.endsWith("`") && part.length >= 2) {
+          const code = document.createElement("code");
+          code.textContent = part.slice(1, -1);
+          parent.appendChild(code);
+        } else if (part) {
+          parent.appendChild(document.createTextNode(part));
+        }
+      }
+    }
+
+    function el(tag, className, text) {
+      const node = document.createElement(tag);
+      if (className) node.className = className;
+      if (typeof text === "string") appendFormattedText(node, text);
+      return node;
+    }
+
+    function renderPolicy(lang) {
+      const data = POLICIES[lang] || POLICIES.en;
+      const resolvedLang = POLICIES[lang] ? lang : "en";
+
+      htmlEl.lang = resolvedLang.replace("_", "-");
+      htmlEl.dir = data.dir || "ltr";
+      document.title = data.docTitle;
+      langLabel.textContent = data.langLabel;
+      langSelect.value = resolvedLang;
+
+      const frag = document.createDocumentFragment();
+
+      frag.appendChild(el("h1", null, data.h1));
+
+      const meta = el("div", "meta");
+      const metaDate = el("div");
+      metaDate.appendChild(el("strong", null, data.lastUpdatedLabel + " "));
+      metaDate.appendChild(document.createTextNode(data.lastUpdatedValue));
+      meta.appendChild(metaDate);
+
+      const metaDev = el("div");
+      metaDev.appendChild(el("strong", null, data.developerLabel + " "));
+      metaDev.appendChild(document.createTextNode(data.developerValue));
+      meta.appendChild(metaDev);
+      frag.appendChild(meta);
+
+      frag.appendChild(el("p", "intro", data.intro));
+
+      // Section 1
+      const s1 = el("section");
+      s1.appendChild(el("h2", null, data.s1.title));
+      s1.appendChild(el("p", null, data.s1.p1));
+      s1.appendChild(el("p", null, data.s1.p2));
+      frag.appendChild(s1);
+
+      // Section 2
+      const s2 = el("section");
+      s2.appendChild(el("h2", null, data.s2.title));
+      s2.appendChild(el("p", null, data.s2.p1));
+      const ul2 = el("ul");
+      for (const item of data.s2.items) {
+        ul2.appendChild(el("li", null, item));
+      }
+      s2.appendChild(ul2);
+      s2.appendChild(el("p", null, data.s2.p2));
+      frag.appendChild(s2);
+
+      // Section 3
+      const s3 = el("section");
+      s3.appendChild(el("h2", null, data.s3.title));
+      s3.appendChild(el("p", null, data.s3.p1));
+      s3.appendChild(el("p", null, data.s3.p2));
+      s3.appendChild(el("p", null, data.s3.p3));
+      frag.appendChild(s3);
+
+      // Section 4
+      const s4 = el("section");
+      s4.appendChild(el("h2", null, data.s4.title));
+      s4.appendChild(el("p", null, data.s4.p1));
+      const ul4 = el("ul");
+      for (const item of data.s4.items) {
+        const li = el("li");
+        if (item.code) {
+          li.appendChild(el("strong", null, item.code));
+          if (item.codes && item.codes.length > 0) {
+            li.appendChild(document.createTextNode(" ("));
+            item.codes.forEach((c, idx) => {
+              if (idx > 0) li.appendChild(document.createTextNode(", "));
+              li.appendChild(el("code", null, c));
+            });
+            li.appendChild(document.createTextNode(")"));
+          }
+          li.appendChild(document.createTextNode(": "));
+        } else if (item.label) {
+          li.appendChild(el("strong", null, item.label));
+          li.appendChild(document.createTextNode(": "));
+        }
+        appendFormattedText(li, item.desc);
+        ul4.appendChild(li);
+      }
+      s4.appendChild(ul4);
+      frag.appendChild(s4);
+
+      // Section 5
+      const s5 = el("section");
+      s5.appendChild(el("h2", null, data.s5.title));
+      const ul5 = el("ul");
+      for (const item of data.s5.items) {
+        ul5.appendChild(el("li", null, item));
+      }
+      s5.appendChild(ul5);
+      frag.appendChild(s5);
+
+      // Section 6
+      const s6 = el("section");
+      s6.appendChild(el("h2", null, data.s6.title));
+      s6.appendChild(el("p", null, data.s6.p1));
+      frag.appendChild(s6);
+
+      // Section 7
+      const s7 = el("section");
+      s7.appendChild(el("h2", null, data.s7.title));
+      s7.appendChild(el("p", null, data.s7.p1));
+      frag.appendChild(s7);
+
+      // Section 8
+      const s8 = el("section");
+      s8.appendChild(el("h2", null, data.s8.title));
+      s8.appendChild(el("p", null, data.s8.p1));
+      const ul8 = el("ul");
+
+      const liDev = el("li");
+      liDev.appendChild(el("strong", null, data.s8.devLabel + " "));
+      liDev.appendChild(document.createTextNode(data.developerValue));
+      ul8.appendChild(liDev);
+
+      const liInfo = el("li");
+      liInfo.appendChild(el("strong", null, data.s8.infoLabel + " "));
+      const link = document.createElement("a");
+      link.href = INFO_URL;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.textContent = INFO_URL;
+      liInfo.appendChild(link);
+      ul8.appendChild(liInfo);
+
+      s8.appendChild(ul8);
+      s8.appendChild(el("p", "note", data.s8.note));
+      frag.appendChild(s8);
+
+      mainEl.replaceChildren(frag);
+    }
+
+    function detectInitialLang() {
+      const params = new URLSearchParams(window.location.search);
+      const qLang = params.get("lang");
+      if (qLang && POLICIES[qLang]) return qLang;
+
+      const navList = Array.isArray(navigator.languages) && navigator.languages.length > 0
+        ? navigator.languages
+        : [navigator.language || "en"];
+
+      for (const raw of navList) {
+        if (!raw) continue;
+        const normalized = raw.replace("-", "_");
+        if (POLICIES[normalized]) return normalized;
+        const lower = normalized.toLowerCase();
+        if (lower.startsWith("zh_tw") || lower.startsWith("zh_hk") || lower.startsWith("zh_mo") || lower.includes("hant")) {
+          return "zh_TW";
+        }
+        if (lower.startsWith("zh")) return "zh_CN";
+        const base = lower.split("_")[0];
+        if (POLICIES[base]) return base;
+      }
+      return "en";
+    }
+
+    langSelect.addEventListener("change", (e) => {
+      const next = e.target.value;
+      renderPolicy(next);
+      const url = new URL(window.location.href);
+      url.searchParams.set("lang", next);
+      window.history.replaceState({}, "", url);
+    });
+
+    const initialLang = detectInitialLang();
+    if (initialLang !== "en") {
+      renderPolicy(initialLang);
+    }
+  </script>
+</body>
+</html>
